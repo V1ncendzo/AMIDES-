@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*python2*-c*os.system(*"'
+pre_detector:
+  case_condition: directly
+  id: 2d2f44ff-4611-4778-a8fc-323a0e9850cc
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: high
+  title: Inline Python Execution - Spawn Shell Via OS System Library
+sigma_fields: true
+description: 'Detects execution of inline Python code via the "-c" in order to call
+  the "system" function from the "os" library, and spawn a shell.
+
+  '

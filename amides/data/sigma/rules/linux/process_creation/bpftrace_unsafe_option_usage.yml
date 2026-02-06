@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*--unsafe*"'
+pre_detector:
+  case_condition: directly
+  id: f8341cb2-ee25-43fa-a975-d8a5a9714b39
+  mitre:
+  - attack.execution
+  - attack.t1059.004
+  severity: medium
+  title: BPFtrace Unsafe Option Usage
+sigma_fields: true
+description: Detects the usage of the unsafe bpftrace option

@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*/bin/sh*"'
+pre_detector:
+  case_condition: directly
+  id: d292e0af-9a18-420c-9525-ec0ac3936892
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: high
+  title: Suspicious Java Children Processes
+sigma_fields: true
+description: Detects java process spawning suspicious children

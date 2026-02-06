@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*update-ca-certificates*"'
+pre_detector:
+  case_condition: directly
+  id: 78a80655-a51e-4669-bc6b-e9d206a462ee
+  mitre:
+  - attack.defense_evasion
+  - attack.t1553.004
+  severity: low
+  title: Install Root Certificate
+sigma_fields: true
+description: Detects installation of new certificate on the system which attackers
+  may use to avoid warnings when connecting to controlled web servers or C2s

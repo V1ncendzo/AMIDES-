@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*https_proxy=*"'
+pre_detector:
+  case_condition: directly
+  id: 72f4ab3f-787d-495d-a55d-68c2ff46cf4c
+  mitre:
+  - attack.defense_evasion
+  - attack.command_and_control
+  - attack.t1090
+  severity: low
+  title: Connection Proxy
+sigma_fields: true
+description: Detects setting proxy configuration

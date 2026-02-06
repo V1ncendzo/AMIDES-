@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-17T01:34:13.371573000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "flock -n / /bin/sh",
+  "Image": "/usr/bin/flock",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 755673,
+    "entity_id": "{8b8a9dc4-d891-696a-61d7-59a9875a0000}",
+    "executable": "/usr/bin/flock",
+    "name": "flock",
+    "command_line": "flock -n / /bin/sh",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "a33947017bae8eccb11068bdd1f36d3addd52ef3d54327a273c9d8363b99ac85"
+    },
+    "parent": {
+      "pid": 755672,
+      "entity_id": "{8b8a9dc4-d891-696a-1d08-130a71600000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Execution via Flock - Linux",
+    "sigma_rule_id": "4b09c71e-4269-4111-9cdd-107d8867f0cc",
+    "attack_id": "171",
+    "original_command": "[Command ID 171]",
+    "log_file": "Shell_Execution_via_Flock_attack171.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-17T01:34:13.371573000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-17 00:32:17.474",
+      "ProcessGuid": "{8b8a9dc4-d891-696a-61d7-59a9875a0000}",
+      "ProcessId": "755673",
+      "Image": "/usr/bin/flock",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "flock -n / /bin/sh",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000005000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=a33947017bae8eccb11068bdd1f36d3addd52ef3d54327a273c9d8363b99ac85",
+      "ParentProcessGuid": "{8b8a9dc4-d891-696a-1d08-130a71600000}",
+      "ParentProcessId": "755672",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

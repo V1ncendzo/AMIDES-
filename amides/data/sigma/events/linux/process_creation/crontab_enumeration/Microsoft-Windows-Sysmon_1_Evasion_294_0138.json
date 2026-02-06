@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-12T17:08:59.535290000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c php -r 'system(\"crontab -l > /tmp/.discovery_cron\");' && cat /tmp/.discovery_cron",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 58488,
+    "entity_id": "{8b8a9dc4-7e60-6964-1dc8-c53901610000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c php -r 'system(\"crontab -l > /tmp/.discovery_cron\");' && cat /tmp/.discovery_cron",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 47786,
+      "entity_id": "{8b8a9dc4-79b2-6964-1d23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Crontab Enumeration",
+    "sigma_rule_id": "403ed92c-b7ec-4edd-9947-5b535ee12d46",
+    "attack_id": "294",
+    "original_command": "php -r 'system(\"crontab -l > /tmp/.discovery_cron\");' && cat /tmp/.discovery_cron",
+    "log_file": "Crontab_Enumeration_attack294.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-12T17:08:59.535290000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 04:53:52.367",
+      "ProcessGuid": "{8b8a9dc4-7e60-6964-1dc8-c53901610000}",
+      "ProcessId": "58488",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c php -r 'system(\"crontab -l > /tmp/.discovery_cron\");' && cat /tmp/.discovery_cron",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000009000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-79b2-6964-1d23-700000000000}",
+      "ParentProcessId": "47786",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

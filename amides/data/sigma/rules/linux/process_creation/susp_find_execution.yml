@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*-perm -4000*"'
+pre_detector:
+  case_condition: directly
+  id: 8344c0e5-5783-47cc-9cf9-a0f7fd03e6cf
+  mitre:
+  - attack.discovery
+  - attack.t1083
+  severity: medium
+  title: Potential Discovery Activity Using Find - Linux
+sigma_fields: true
+description: Detects usage of "find" binary in a suspicious manner to perform discovery

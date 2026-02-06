@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T05:48:34.063801000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "sed -n 1,$p /etc/passwd",
+  "Image": "/usr/bin/sed",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 149161,
+    "entity_id": "{8b8a9dc4-b3dd-6964-811e-069dba5f0000}",
+    "executable": "/usr/bin/sed",
+    "name": "sed",
+    "command_line": "sed -n 1,$p /etc/passwd",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "db67d4895f868617bfd19786247ebda7c2f50f4cb3857a987f732a2c267a799e"
+    },
+    "parent": {
+      "pid": 149160,
+      "entity_id": "{8b8a9dc4-b3dd-6964-1d98-a561ea580000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local System Accounts Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "109",
+    "original_command": "sed -n '1,$p' /etc/passwd",
+    "log_file": "Local_System_Accounts_Discovery_-_Linux_attack109.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T05:48:34.063801000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 08:42:05.453",
+      "ProcessGuid": "{8b8a9dc4-b3dd-6964-811e-069dba5f0000}",
+      "ProcessId": "149161",
+      "Image": "/usr/bin/sed",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "sed -n 1,$p /etc/passwd",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=db67d4895f868617bfd19786247ebda7c2f50f4cb3857a987f732a2c267a799e",
+      "ParentProcessGuid": "{8b8a9dc4-b3dd-6964-1d98-a561ea580000}",
+      "ParentProcessId": "149160",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

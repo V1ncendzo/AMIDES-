@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T06:34:49.977172000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "bash -c echo dW5hbWUgLWE=|base64 -d | sh",
+  "Image": "/usr/bin/bash",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 32843,
+    "entity_id": "{8b8a9dc4-9aeb-6960-2d53-700dbb5d0000}",
+    "executable": "/usr/bin/bash",
+    "name": "bash",
+    "command_line": "bash -c echo dW5hbWUgLWE=|base64 -d | sh",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1"
+    },
+    "parent": {
+      "pid": 32842,
+      "entity_id": "{8b8a9dc4-9aeb-6960-1dc8-2ee6f1580000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Linux Shell Pipe to Shell",
+    "sigma_rule_id": "880973f3-9708-491c-a77b-2a35a1921158",
+    "attack_id": "94",
+    "original_command": "bash -c \"echo dW5hbWUgLWE=|base64 -d | sh\"",
+    "log_file": "Linux_Shell_Pipe_to_Shell_attack94.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T06:34:49.977172000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 06:06:35.707",
+      "ProcessGuid": "{8b8a9dc4-9aeb-6960-2d53-700dbb5d0000}",
+      "ProcessId": "32843",
+      "Image": "/usr/bin/bash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "bash -c echo dW5hbWUgLWE=|base64 -d | sh",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1",
+      "ParentProcessGuid": "{8b8a9dc4-9aeb-6960-1dc8-2ee6f1580000}",
+      "ParentProcessId": "32842",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

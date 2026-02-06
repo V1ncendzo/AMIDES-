@@ -1,0 +1,994 @@
+{
+    "name": "rule_attr_model_linux_word_0",
+    "timestamp": "",
+    "results": {
+        "Kaspersky Endpoint Security Stopped Via CommandLine - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Kaspersky Endpoint Security Stopped Via CommandLine - Linux",
+            "timestamp": ""
+        },
+        "Suspicious Invocation of Shell via AWK - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9247
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.000063293602828,
+                "data_max": 1.000063293602828,
+                "range": 2.000126587205656,
+                "scale": 0.49996835520149935,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Suspicious Invocation of Shell via AWK - Linux",
+            "timestamp": ""
+        },
+        "Decode Base64 Encoded Text": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9245
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Decode Base64 Encoded Text",
+            "timestamp": ""
+        },
+        "Linux Base64 Encoded Pipe to Shell": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Linux Base64 Encoded Pipe to Shell",
+            "timestamp": ""
+        },
+        "BPFtrace Unsafe Option Usage": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9245
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "BPFtrace Unsafe Option Usage",
+            "timestamp": ""
+        },
+        "Clear Linux Logs": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9247
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Clear Linux Logs",
+            "timestamp": ""
+        },
+        "Crontab Enumeration": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9245
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Crontab Enumeration",
+            "timestamp": ""
+        },
+        "Remove Scheduled Cron Task/Job": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9245
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Remove Scheduled Cron Task/Job",
+            "timestamp": ""
+        },
+        "Linux Crypto Mining Indicators": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9251
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -0.9600118393653749,
+                "data_max": 0.9600118393653749,
+                "range": 1.9200236787307499,
+                "scale": 0.5208269101457434,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Linux Crypto Mining Indicators",
+            "timestamp": ""
+        },
+        "DD File Overwrite": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9249
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -0.9600118393653749,
+                "data_max": 0.9600118393653749,
+                "range": 1.9200236787307499,
+                "scale": 0.5208269101457434,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "DD File Overwrite",
+            "timestamp": ""
+        },
+        "Ufw Force Stop Using Ufw-Init": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9248
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Ufw Force Stop Using Ufw-Init",
+            "timestamp": ""
+        },
+        "File and Directory Discovery - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9245
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "File and Directory Discovery - Linux",
+            "timestamp": ""
+        },
+        "Shell Execution via Find - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000201550187668,
+                "data_max": 1.0000201550187668,
+                "range": 2.0000403100375337,
+                "scale": 0.4999899226937249,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Shell Execution via Find - Linux",
+            "timestamp": ""
+        },
+        "Shell Execution via Flock - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000201550187668,
+                "data_max": 1.0000201550187668,
+                "range": 2.0000403100375337,
+                "scale": 0.4999899226937249,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Shell Execution via Flock - Linux",
+            "timestamp": ""
+        },
+        "OS Architecture Discovery Via Grep": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "OS Architecture Discovery Via Grep",
+            "timestamp": ""
+        },
+        "Local System Accounts Discovery - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9247
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Local System Accounts Discovery - Linux",
+            "timestamp": ""
+        },
+        "Local Groups Discovery - Linux": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -1.0000123326722654,
+                "data_max": 1.0000123326722654,
+                "range": 2.000024665344531,
+                "scale": 0.49999383373991374,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Local Groups Discovery - Linux",
+            "timestamp": ""
+        },
+        "OMIGOD SCX RunAsProvider ExecuteShellCommand": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9245
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -0.9598932814156849,
+                "data_max": 0.9598932814156849,
+                "range": 1.9197865628313697,
+                "scale": 0.5208912383078483,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "OMIGOD SCX RunAsProvider ExecuteShellCommand",
+            "timestamp": ""
+        },
+        "Linux Shell Pipe to Shell": {
+            "estimator": "SVC",
+            "estimator_params": {
+                "C": 0.01,
+                "break_ties": false,
+                "cache_size": 2000,
+                "class_weight": "balanced",
+                "coef0": 0.0,
+                "decision_function_shape": "ovr",
+                "degree": 3,
+                "gamma": "scale",
+                "kernel": "linear",
+                "max_iter": -1,
+                "probability": false,
+                "random_state": null,
+                "shrinking": true,
+                "tol": 0.001,
+                "verbose": false
+            },
+            "data": {
+                "train_data": {
+                    "shape": [
+                        10086,
+                        9246
+                    ],
+                    "feature_info": [],
+                    "class_info": {
+                        "num_positive_samples": 1,
+                        "num_negative_samples": 10085,
+                        "positive_negative_ratio": 9.915716410510659e-05
+                    }
+                },
+                "test_data": null,
+                "valid_data": null,
+                "name": "rule_attr_model_linux_word"
+            },
+            "tainted_share": 0.0,
+            "tainted_seed": 81,
+            "scaler": {
+                "type": "MinMaxScaler",
+                "data_min": -0.9600118393653749,
+                "data_max": 0.9600118393653749,
+                "range": 1.9200236787307499,
+                "scale": 0.5208269101457434,
+                "min": 0.5
+            },
+            "feature_extractors": [
+                "TfidfVectorizer"
+            ],
+            "name": "Linux Shell Pipe to Shell",
+            "timestamp": ""
+        }
+    }
+}

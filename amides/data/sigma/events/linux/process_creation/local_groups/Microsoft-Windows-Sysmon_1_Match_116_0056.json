@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T06:40:26.771827000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "python3 -c import os; os.system('\\x63\\x61\\x74\\x20\\x2f\\x65\\x74\\x63\\x2f\\x67\\x72\\x6f\\x75\\x70')",
+  "Image": "/usr/bin/python3.12",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 159027,
+    "entity_id": "{8b8a9dc4-c006-6964-1d23-700000000000}",
+    "executable": "/usr/bin/python3.12",
+    "name": "python3.12",
+    "command_line": "python3 -c import os; os.system('\\x63\\x61\\x74\\x20\\x2f\\x65\\x74\\x63\\x2f\\x67\\x72\\x6f\\x75\\x70')",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "1319c137ea5d30f1d7599943cb0e72666648c20a94cf5932dd095364d07dafeb"
+    },
+    "parent": {
+      "pid": 159026,
+      "entity_id": "{8b8a9dc4-c006-6964-1dc8-fd88465e0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local Groups Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "116",
+    "original_command": "python3 -c \"import os; os.system('\\x63\\x61\\x74\\x20\\x2f\\x65\\x74\\x63\\x2f\\x67\\x72\\x6f\\x75\\x70')\"",
+    "log_file": "Local_Groups_Discovery_-_Linux_attack116.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T06:40:26.771827000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 09:33:58.153",
+      "ProcessGuid": "{8b8a9dc4-c006-6964-1d23-700000000000}",
+      "ProcessId": "159027",
+      "Image": "/usr/bin/python3.12",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "python3 -c import os; os.system('\\x63\\x61\\x74\\x20\\x2f\\x65\\x74\\x63\\x2f\\x67\\x72\\x6f\\x75\\x70')",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=1319c137ea5d30f1d7599943cb0e72666648c20a94cf5932dd095364d07dafeb",
+      "ParentProcessGuid": "{8b8a9dc4-c006-6964-1dc8-fd88465e0000}",
+      "ParentProcessId": "159026",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

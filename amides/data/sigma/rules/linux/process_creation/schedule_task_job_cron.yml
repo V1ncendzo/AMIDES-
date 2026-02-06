@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*/tmp/*"'
+pre_detector:
+  case_condition: directly
+  id: 6b14bac8-3e3a-4324-8109-42f0546a347f
+  mitre:
+  - attack.execution
+  - attack.persistence
+  - attack.privilege_escalation
+  - attack.t1053.003
+  severity: medium
+  title: Scheduled Cron Task/Job - Linux
+sigma_fields: true
+description: Detects abuse of the cron utility to perform task scheduling for initial
+  or recurring execution of malicious code. Detection will focus on crontab jobs uploaded
+  from the tmp folder.

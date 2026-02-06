@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T06:43:37.211273000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "perl -e system(pack(\"H*\", \"636174202f6574632f67726f7570\"))",
+  "Image": "/usr/bin/perl",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 160979,
+    "entity_id": "{8b8a9dc4-c0c4-6964-2d29-09a569630000}",
+    "executable": "/usr/bin/perl",
+    "name": "perl",
+    "command_line": "perl -e system(pack(\"H*\", \"636174202f6574632f67726f7570\"))",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "38d70f54fd18d614e9e6cc35c960b45f54e7b991894b8308e704ae9953c86ce4"
+    },
+    "parent": {
+      "pid": 160978,
+      "entity_id": "{8b8a9dc4-c0c4-6964-1d38-881b6c5c0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local Groups Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "163",
+    "original_command": "perl -e 'system(pack(\"H*\", \"636174202f6574632f67726f7570\"))'",
+    "log_file": "Local_Groups_Discovery_-_Linux_attack163.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T06:43:37.211273000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 09:37:08.597",
+      "ProcessGuid": "{8b8a9dc4-c0c4-6964-2d29-09a569630000}",
+      "ProcessId": "160979",
+      "Image": "/usr/bin/perl",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "perl -e system(pack(\"H*\", \"636174202f6574632f67726f7570\"))",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=38d70f54fd18d614e9e6cc35c960b45f54e7b991894b8308e704ae9953c86ce4",
+      "ParentProcessGuid": "{8b8a9dc4-c0c4-6964-1d38-881b6c5c0000}",
+      "ParentProcessId": "160978",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

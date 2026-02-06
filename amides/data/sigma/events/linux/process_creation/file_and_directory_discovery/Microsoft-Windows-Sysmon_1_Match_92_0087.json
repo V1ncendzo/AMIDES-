@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T03:17:57.360192000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "find /etc -maxdepth 2 -name *.conf",
+  "Image": "/usr/bin/find",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 98006,
+    "entity_id": "{8b8a9dc4-93d2-6964-c13c-1e26c85c0000}",
+    "executable": "/usr/bin/find",
+    "name": "find",
+    "command_line": "find /etc -maxdepth 2 -name *.conf",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "ac1ea1c5391de921aca1572f1bf25d03707beb3887b27c16a5b4948fd553941b"
+    },
+    "parent": {
+      "pid": 98005,
+      "entity_id": "{8b8a9dc4-93d2-6964-1db8-69d1545c0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "File and Directory Discovery - Linux",
+    "sigma_rule_id": "d3feb4ee-ff1d-4d3d-bd10-5b28a238cc72",
+    "attack_id": "92",
+    "original_command": "find /etc -maxdepth 2 -name \"*.conf\"",
+    "log_file": "File_and_Directory_Discovery_attack92.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T03:17:57.360192000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 06:25:22.771",
+      "ProcessGuid": "{8b8a9dc4-93d2-6964-c13c-1e26c85c0000}",
+      "ProcessId": "98006",
+      "Image": "/usr/bin/find",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "find /etc -maxdepth 2 -name *.conf",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=ac1ea1c5391de921aca1572f1bf25d03707beb3887b27c16a5b4948fd553941b",
+      "ParentProcessGuid": "{8b8a9dc4-93d2-6964-1db8-69d1545c0000}",
+      "ParentProcessId": "98005",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

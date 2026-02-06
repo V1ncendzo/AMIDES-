@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*system*account*add*"'
+pre_detector:
+  case_condition: directly
+  id: b28e4eb3-8bbc-4f0c-819f-edfe8e2f25db
+  mitre:
+  - attack.persistence
+  - attack.execution
+  - attack.t1136
+  - attack.t1059.012
+  severity: medium
+  title: ESXi Account Creation Via ESXCLI
+sigma_fields: true
+description: Detects user account creation on ESXi system via esxcli

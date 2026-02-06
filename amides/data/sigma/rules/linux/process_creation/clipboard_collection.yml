@@ -1,0 +1,17 @@
+filter: 'process.command_line: "*-sel*clip*-o*"'
+pre_detector:
+  case_condition: directly
+  id: ec127035-a636-4b9a-8555-0efd4e59f316
+  mitre:
+  - attack.collection
+  - attack.t1115
+  severity: low
+  title: Clipboard Collection with Xclip Tool
+sigma_fields: true
+description: 'Detects attempts to collect data stored in the clipboard from users
+  with the usage of xclip tool. Xclip has to be installed.
+
+  Highly recommended using rule on servers, due to high usage of clipboard utilities
+  on user workstations.
+
+  '

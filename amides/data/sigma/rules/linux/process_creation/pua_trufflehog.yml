@@ -1,0 +1,21 @@
+filter: 'process.command_line: "*trufflehog*--results=verified*docker --image*"'
+pre_detector:
+  case_condition: directly
+  id: d7a650c4-226c-451e-948f-cc490db506aa
+  mitre:
+  - attack.discovery
+  - attack.credential_access
+  - attack.t1083
+  - attack.t1552.001
+  severity: medium
+  title: PUA - TruffleHog Execution - Linux
+sigma_fields: true
+description: 'Detects execution of TruffleHog, a tool used to search for secrets in
+  different platforms like Git, Jira, Slack, SharePoint, etc. that could be used maliciously.
+
+  While it is a legitimate tool, intended for use in CI pipelines and security assessments,
+
+  It was observed in the Shai-Hulud malware campaign targeting npm packages to steal
+  sensitive information.
+
+  '

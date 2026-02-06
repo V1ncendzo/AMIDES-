@@ -1,0 +1,10 @@
+filter: 'process.command_line: "*bash*"'
+pre_detector:
+  case_condition: directly
+  id: 6104e693-a7d6-4891-86cb-49a258523559
+  mitre:
+  - attack.execution
+  severity: low
+  title: Bash Interactive Shell
+sigma_fields: true
+description: Detects execution of the bash shell with the interactive flag "-i".

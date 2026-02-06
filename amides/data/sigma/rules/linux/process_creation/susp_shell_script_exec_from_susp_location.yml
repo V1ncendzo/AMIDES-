@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*bash*/tmp/*-c*"'
+pre_detector:
+  case_condition: directly
+  id: 30bcce26-51c5-49f2-99c8-7b59e3af36c7
+  mitre:
+  - attack.execution
+  severity: medium
+  title: Execution Of Script Located In Potentially Suspicious Directory
+sigma_fields: true
+description: Detects executions of scripts located in potentially suspicious locations
+  such as "/tmp" via a shell such as "bash", "sh", etc.

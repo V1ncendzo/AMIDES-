@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*sh -c /sbin/modprobe msr allow_writes=on*"'
+pre_detector:
+  case_condition: directly
+  id: 9069ea3c-b213-4c52-be13-86506a227ab1
+  mitre:
+  - attack.impact
+  - attack.t1496
+  severity: high
+  title: Linux Crypto Mining Indicators
+sigma_fields: true
+description: Detects command line parameters or strings often used by crypto miners

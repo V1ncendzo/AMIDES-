@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T05:43:10.207138000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/usr/bin/tac /etc/passwd",
+  "Image": "/usr/bin/tac",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 145989,
+    "entity_id": "{8b8a9dc4-b299-6964-5198-99f5b55e0000}",
+    "executable": "/usr/bin/tac",
+    "name": "tac",
+    "command_line": "/usr/bin/tac /etc/passwd",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "5763f0f6e69b5e415d4106fb78123040f2f7b014c76f1693c34b82d2bed444b9"
+    },
+    "parent": {
+      "pid": 145988,
+      "entity_id": "{8b8a9dc4-b299-6964-1d48-bb2588600000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local System Accounts Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "29",
+    "original_command": "/usr/bin/tac /etc/passwd",
+    "log_file": "Local_System_Accounts_Discovery_-_Linux_attack29.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T05:43:10.207138000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 08:36:41.595",
+      "ProcessGuid": "{8b8a9dc4-b299-6964-5198-99f5b55e0000}",
+      "ProcessId": "145989",
+      "Image": "/usr/bin/tac",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/usr/bin/tac /etc/passwd",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=5763f0f6e69b5e415d4106fb78123040f2f7b014c76f1693c34b82d2bed444b9",
+      "ParentProcessGuid": "{8b8a9dc4-b299-6964-1d48-bb2588600000}",
+      "ParentProcessId": "145988",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

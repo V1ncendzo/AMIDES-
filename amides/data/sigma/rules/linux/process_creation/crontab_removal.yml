@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*crontab*"'
+pre_detector:
+  case_condition: directly
+  id: c2e234de-03a3-41e1-b39a-1e56dc17ba67
+  mitre:
+  - attack.defense_evasion
+  severity: medium
+  title: Remove Scheduled Cron Task/Job
+sigma_fields: true
+description: 'Detects usage of the ''crontab'' utility to remove the current crontab.
+
+  This is a common occurrence where cryptocurrency miners compete against each other
+  by removing traces of other miners to hijack the maximum amount of resources possible
+
+  '

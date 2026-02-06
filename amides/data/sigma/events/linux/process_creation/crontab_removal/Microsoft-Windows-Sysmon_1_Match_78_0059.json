@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T02:38:22.229871000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "crontab -r--force",
+  "Image": "/usr/bin/crontab",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 82231,
+    "entity_id": "{8b8a9dc4-8a8a-6964-451f-d1e57e5e0000}",
+    "executable": "/usr/bin/crontab",
+    "name": "crontab",
+    "command_line": "crontab -r--force",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "d71b4e26034ec955cae7e7101a4b33f5923b3396a0e1e1893cd1274bbb51c3ec"
+    },
+    "parent": {
+      "pid": 82230,
+      "entity_id": "{8b8a9dc4-8a8a-6964-1d68-83d848560000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Remove Scheduled Cron Task/Job",
+    "sigma_rule_id": "c2e234de-03a3-41e1-b39a-1e56dc17ba67",
+    "attack_id": "78",
+    "original_command": "crontab -r--force",
+    "log_file": "Remove_Scheduled_Cron_Task_attack78.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T02:38:22.229871000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 05:45:46.424",
+      "ProcessGuid": "{8b8a9dc4-8a8a-6964-451f-d1e57e5e0000}",
+      "ProcessId": "82231",
+      "Image": "/usr/bin/crontab",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "crontab -r--force",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000009000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=d71b4e26034ec955cae7e7101a4b33f5923b3396a0e1e1893cd1274bbb51c3ec",
+      "ParentProcessGuid": "{8b8a9dc4-8a8a-6964-1d68-83d848560000}",
+      "ParentProcessId": "82230",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

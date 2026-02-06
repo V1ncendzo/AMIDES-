@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*perl*Socket*connect*open*exec*"'
+pre_detector:
+  case_condition: directly
+  id: 259df6bc-003f-4306-9f54-4ff1a08fa38e
+  mitre:
+  - attack.execution
+  severity: high
+  title: Potential Perl Reverse Shell Execution
+sigma_fields: true
+description: Detects execution of the perl binary with the "-e" flag and common strings
+  related to potential reverse shell activity

@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*crontab*"'
+pre_detector:
+  case_condition: directly
+  id: 403ed92c-b7ec-4edd-9947-5b535ee12d46
+  mitre:
+  - attack.discovery
+  - attack.t1007
+  severity: low
+  title: Crontab Enumeration
+sigma_fields: true
+description: Detects usage of crontab to list the tasks of the user

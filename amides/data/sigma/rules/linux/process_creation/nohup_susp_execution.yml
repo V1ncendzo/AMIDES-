@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*/tmp/*"'
+pre_detector:
+  case_condition: directly
+  id: 457df417-8b9d-4912-85f3-9dbda39c3645
+  mitre:
+  - attack.execution
+  severity: high
+  title: Suspicious Nohup Execution
+sigma_fields: true
+description: Detects execution of binaries located in potentially suspicious locations
+  via "nohup"

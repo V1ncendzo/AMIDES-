@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*-aG sudoers*"'
+pre_detector:
+  case_condition: directly
+  id: 6a50f16c-3b7b-42d1-b081-0fdd3ba70a73
+  mitre:
+  - attack.privilege_escalation
+  - attack.persistence
+  severity: medium
+  title: User Added To Root/Sudoers Group Using Usermod
+sigma_fields: true
+description: Detects usage of the "usermod" binary to add users add users to the root
+  or suoders groups

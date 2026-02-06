@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T03:18:01.410134000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "find /etc -name *.conf -maxdepth 2",
+  "Image": "/usr/bin/find",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 98027,
+    "entity_id": "{8b8a9dc4-93d6-6964-c16c-2ee7ff590000}",
+    "executable": "/usr/bin/find",
+    "name": "find",
+    "command_line": "find /etc -name *.conf -maxdepth 2",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "ac1ea1c5391de921aca1572f1bf25d03707beb3887b27c16a5b4948fd553941b"
+    },
+    "parent": {
+      "pid": 98026,
+      "entity_id": "{8b8a9dc4-93d6-6964-1dd8-a44c925f0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "File and Directory Discovery - Linux",
+    "sigma_rule_id": "d3feb4ee-ff1d-4d3d-bd10-5b28a238cc72",
+    "attack_id": "93",
+    "original_command": "find /etc -name \"*.conf\" -maxdepth 2",
+    "log_file": "File_and_Directory_Discovery_attack93.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T03:18:01.410134000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 06:25:26.821",
+      "ProcessGuid": "{8b8a9dc4-93d6-6964-c16c-2ee7ff590000}",
+      "ProcessId": "98027",
+      "Image": "/usr/bin/find",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "find /etc -name *.conf -maxdepth 2",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=ac1ea1c5391de921aca1572f1bf25d03707beb3887b27c16a5b4948fd553941b",
+      "ParentProcessGuid": "{8b8a9dc4-93d6-6964-1dd8-a44c925f0000}",
+      "ParentProcessId": "98026",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

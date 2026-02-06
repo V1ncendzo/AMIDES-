@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-17T01:43:58.658555000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "cat /proc/12317/stat",
+  "Image": "/usr/bin/cat",
+  "ParentImage": "/usr/bin/bash",
+  "CurrentDirectory": "/home/vincenzolog",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "vincenzolog"
+  },
+  "process": {
+    "pid": 761541,
+    "entity_id": "{8b8a9dc4-dada-696a-b124-90b063600000}",
+    "executable": "/usr/bin/cat",
+    "name": "cat",
+    "command_line": "cat /proc/12317/stat",
+    "working_directory": "/home/vincenzolog",
+    "hash": {
+      "sha256": "dda0961715677dff3cd560e1933379c0eca73c0b6e19fef2737492ebc1de1700"
+    },
+    "parent": {
+      "pid": 761526,
+      "entity_id": "{8b8a9dc4-dad9-696a-2d13-4280d55a0000}",
+      "executable": "/usr/bin/bash",
+      "name": "bash",
+      "command_line": "/bin/bash"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Execution via Flock - Linux",
+    "sigma_rule_id": "4b09c71e-4269-4111-9cdd-107d8867f0cc",
+    "attack_id": "266",
+    "original_command": "[Command ID 266]",
+    "log_file": "Shell_Execution_via_Flock_attack266.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-17T01:43:58.658555000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-17 00:42:02.757",
+      "ProcessGuid": "{8b8a9dc4-dada-696a-b124-90b063600000}",
+      "ProcessId": "761541",
+      "Image": "/usr/bin/cat",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "cat /proc/12317/stat",
+      "CurrentDirectory": "/home/vincenzolog",
+      "User": "vincenzolog",
+      "LogonGuid": "{8b8a9dc4-0000-0000-e803-000000000000}",
+      "LogonId": "1000",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=dda0961715677dff3cd560e1933379c0eca73c0b6e19fef2737492ebc1de1700",
+      "ParentProcessGuid": "{8b8a9dc4-dad9-696a-2d13-4280d55a0000}",
+      "ParentProcessId": "761526",
+      "ParentImage": "/usr/bin/bash",
+      "ParentCommandLine": "/bin/bash",
+      "ParentUser": "vincenzolog"
+    }
+  }
+}

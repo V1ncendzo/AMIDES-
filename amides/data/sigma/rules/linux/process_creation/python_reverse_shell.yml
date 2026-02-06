@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*-c*import*pty*socket*spawn*.connect*"'
+pre_detector:
+  case_condition: directly
+  id: 32e62bc7-3de0-4bb1-90af-532978fe42c0
+  mitre:
+  - attack.execution
+  severity: high
+  title: Python Reverse Shell Execution Via PTY And Socket Modules
+sigma_fields: true
+description: 'Detects the execution of python with calls to the socket and pty module
+  in order to connect and spawn a potential reverse shell.
+
+  '

@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-15T17:59:21.679325000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c /usr/bin/dd i\\f=/dev/zero o\\f=/tmp/confidential.dat count=1 bs=1024",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 33261,
+    "entity_id": "{8b8a9dc4-2611-6969-1d18-75a6e45e0000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c /usr/bin/dd i\\f=/dev/zero o\\f=/tmp/confidential.dat count=1 bs=1024",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 26623,
+      "entity_id": "{8b8a9dc4-23cd-6969-dd23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "DD File Overwrite",
+    "sigma_rule_id": "2953194b-e33c-4859-b9e8-05948c167447",
+    "attack_id": "143",
+    "original_command": "/usr/bin/dd i\\f=/dev/zero o\\f=/tmp/confidential.dat count=1 bs=1024",
+    "log_file": "DD_File_Overwrite_attack143.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-15T17:59:21.679325000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-15 17:38:25.466",
+      "ProcessGuid": "{8b8a9dc4-2611-6969-1d18-75a6e45e0000}",
+      "ProcessId": "33261",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c /usr/bin/dd i\\f=/dev/zero o\\f=/tmp/confidential.dat count=1 bs=1024",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-23cd-6969-dd23-700000000000}",
+      "ParentProcessId": "26623",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

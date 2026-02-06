@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-16T15:18:28.971017000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "awk BEGIN{system(\"/bin/sh\");}",
+  "Image": "/usr/bin/mawk",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 69950,
+    "entity_id": "{8b8a9dc4-4907-696a-d9c2-925399580000}",
+    "executable": "/usr/bin/mawk",
+    "name": "mawk",
+    "command_line": "awk BEGIN{system(\"/bin/sh\");}",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c"
+    },
+    "parent": {
+      "pid": 69949,
+      "entity_id": "{8b8a9dc4-4907-696a-1d88-3cdebb620000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Suspicious Invocation of Shell via AWK - Linux",
+    "sigma_rule_id": "8c1a5675-cb85-452f-a298-b01b22a51856",
+    "attack_id": "133",
+    "original_command": "awk 'BEGIN{system(\"/bin/sh\");}'",
+    "log_file": "Suspicious_Invocation_of_Shell_via_AWK_attack133.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-16T15:18:28.971017000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-16 14:19:51.622",
+      "ProcessGuid": "{8b8a9dc4-4907-696a-d9c2-925399580000}",
+      "ProcessId": "69950",
+      "Image": "/usr/bin/mawk",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "awk BEGIN{system(\"/bin/sh\");}",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c",
+      "ParentProcessGuid": "{8b8a9dc4-4907-696a-1d88-3cdebb620000}",
+      "ParentProcessId": "69949",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

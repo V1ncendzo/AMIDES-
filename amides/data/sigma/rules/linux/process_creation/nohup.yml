@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*nohup*"'
+pre_detector:
+  case_condition: directly
+  id: e4ffe466-6ff8-48d4-94bd-e32d1a6061e2
+  mitre:
+  - attack.execution
+  - attack.t1059.004
+  severity: medium
+  title: Nohup Execution
+sigma_fields: true
+description: Detects usage of nohup which could be leveraged by an attacker to keep
+  a process running or break out from restricted environments

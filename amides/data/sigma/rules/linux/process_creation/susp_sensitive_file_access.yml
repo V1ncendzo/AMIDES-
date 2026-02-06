@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*/usr/local/bin/*"'
+pre_detector:
+  case_condition: directly
+  id: 86157017-c2b1-4d4a-8c33-93b8e67e4af4
+  mitre:
+  - attack.impact
+  - attack.t1565.001
+  severity: medium
+  title: Potential Suspicious Change To Sensitive/Critical Files
+sigma_fields: true
+description: Detects changes of sensitive and critical files. Monitors files that
+  you don't expect to change without planning on Linux system.

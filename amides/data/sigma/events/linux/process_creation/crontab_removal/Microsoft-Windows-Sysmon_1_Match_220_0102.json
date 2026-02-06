@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T02:48:17.796869000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c crontab -r",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 87706,
+    "entity_id": "{8b8a9dc4-8cdd-6964-1d48-e1e7c65d0000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c crontab -r",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 87705,
+      "entity_id": "{8b8a9dc4-8cdd-6964-1d08-a661d7630000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Remove Scheduled Cron Task/Job",
+    "sigma_rule_id": "c2e234de-03a3-41e1-b39a-1e56dc17ba67",
+    "attack_id": "220",
+    "original_command": "/bin/sh -c 'crontab -r'",
+    "log_file": "Remove_Scheduled_Cron_Task_attack220.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T02:48:17.796869000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 05:55:41.991",
+      "ProcessGuid": "{8b8a9dc4-8cdd-6964-1d48-e1e7c65d0000}",
+      "ProcessId": "87706",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c crontab -r",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000009000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-8cdd-6964-1d08-a661d7630000}",
+      "ParentProcessId": "87705",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+filter: 'process.command_line: "*mkfifo*"'
+pre_detector:
+  case_condition: directly
+  id: 9d779ce8-5256-4b13-8b6f-b91c602b43f4
+  mitre:
+  - attack.execution
+  severity: low
+  title: Named Pipe Created Via Mkfifo
+sigma_fields: true
+description: Detects the creation of a new named pipe using the "mkfifo" utility

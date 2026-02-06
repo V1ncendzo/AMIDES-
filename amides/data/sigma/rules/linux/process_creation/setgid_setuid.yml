@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*chown root*chmod u+s*"'
+pre_detector:
+  case_condition: directly
+  id: c21c4eaa-ba2e-419a-92b2-8371703cbe21
+  mitre:
+  - attack.defense_evasion
+  - attack.persistence
+  - attack.privilege_escalation
+  - attack.t1548.001
+  severity: low
+  title: Setuid and Setgid
+sigma_fields: true
+description: Detects suspicious change of file privileges with chown and chmod commands

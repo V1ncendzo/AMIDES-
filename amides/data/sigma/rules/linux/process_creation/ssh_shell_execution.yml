@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*permitlocalcommand=yes*sh 0<&2 1>&2*"'
+pre_detector:
+  case_condition: directly
+  id: 8737b7f6-8df3-4bb7-b1da-06019b99b687
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: high
+  title: Shell Invocation Via Ssh - Linux
+sigma_fields: true
+description: 'Detects the use of the "ssh" utility to execute a shell. Such behavior
+  may be associated with privilege escalation, unauthorized command execution, or
+  to break out from restricted environments.
+
+  '

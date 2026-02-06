@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-17T01:43:41.641148000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "journalctl --rotate",
+  "Image": "/usr/bin/journalctl",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 761327,
+    "entity_id": "{8b8a9dc4-dac9-696a-cd6b-78c5555f0000}",
+    "executable": "/usr/bin/journalctl",
+    "name": "journalctl",
+    "command_line": "journalctl --rotate",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "7bd10a9c601c3204a6c464fc517b204e469eca7f12b09f9c4826f3cc1e42bd79"
+    },
+    "parent": {
+      "pid": 761326,
+      "entity_id": "{8b8a9dc4-dac9-696a-1d48-7220ae590000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Execution via Flock - Linux",
+    "sigma_rule_id": "4b09c71e-4269-4111-9cdd-107d8867f0cc",
+    "attack_id": "262",
+    "original_command": "[Command ID 262]",
+    "log_file": "Shell_Execution_via_Flock_attack262.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-17T01:43:41.641148000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-17 00:41:45.726",
+      "ProcessGuid": "{8b8a9dc4-dac9-696a-cd6b-78c5555f0000}",
+      "ProcessId": "761327",
+      "Image": "/usr/bin/journalctl",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "journalctl --rotate",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000005000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=7bd10a9c601c3204a6c464fc517b204e469eca7f12b09f9c4826f3cc1e42bd79",
+      "ParentProcessGuid": "{8b8a9dc4-dac9-696a-1d48-7220ae590000}",
+      "ParentProcessId": "761326",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

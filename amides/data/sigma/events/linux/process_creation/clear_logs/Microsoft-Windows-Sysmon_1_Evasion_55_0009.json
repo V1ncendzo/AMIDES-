@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-12T13:33:04.461118000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c sh\"\"r\"\"ed\" -u /var/log/syslog",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 12227,
+    "entity_id": "{8b8a9dc4-4bc3-6964-1db8-f730ac590000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c sh\"\"r\"\"ed\" -u /var/log/syslog",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 10317,
+      "entity_id": "{8b8a9dc4-4ae1-6964-1d23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Clear Linux Logs",
+    "sigma_rule_id": "80915f59-9b56-4616-9de0-fd0dea6c12fe",
+    "attack_id": "55",
+    "original_command": "sh\"\"r\"\"ed\" -u /var/log/syslog",
+    "log_file": "Clear_Linux_Logs_attack55.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-12T13:33:04.461118000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 01:17:55.402",
+      "ProcessGuid": "{8b8a9dc4-4bc3-6964-1db8-f730ac590000}",
+      "ProcessId": "12227",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c sh\"\"r\"\"ed\" -u /var/log/syslog",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-4ae1-6964-1d23-700000000000}",
+      "ParentProcessId": "10317",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

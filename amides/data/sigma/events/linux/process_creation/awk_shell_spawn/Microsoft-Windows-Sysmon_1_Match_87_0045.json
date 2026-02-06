@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-16T15:14:13.913484000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "mawk BEGIN {system(\"/bin/sh #comment\")}",
+  "Image": "/usr/bin/mawk",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 67275,
+    "entity_id": "{8b8a9dc4-4808-696a-d9d2-9bbd35590000}",
+    "executable": "/usr/bin/mawk",
+    "name": "mawk",
+    "command_line": "mawk BEGIN {system(\"/bin/sh #comment\")}",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c"
+    },
+    "parent": {
+      "pid": 67274,
+      "entity_id": "{8b8a9dc4-4808-696a-1d68-c0de21610000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Suspicious Invocation of Shell via AWK - Linux",
+    "sigma_rule_id": "8c1a5675-cb85-452f-a298-b01b22a51856",
+    "attack_id": "87",
+    "original_command": "mawk 'BEGIN {system(\"/bin/sh #comment\")}'",
+    "log_file": "Suspicious_Invocation_of_Shell_via_AWK_attack87.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-16T15:14:13.913484000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-16 14:15:36.564",
+      "ProcessGuid": "{8b8a9dc4-4808-696a-d9d2-9bbd35590000}",
+      "ProcessId": "67275",
+      "Image": "/usr/bin/mawk",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "mawk BEGIN {system(\"/bin/sh #comment\")}",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c",
+      "ParentProcessGuid": "{8b8a9dc4-4808-696a-1d68-c0de21610000}",
+      "ParentProcessId": "67274",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

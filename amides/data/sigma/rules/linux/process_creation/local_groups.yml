@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*/etc/group*"'
+pre_detector:
+  case_condition: directly
+  id: 676381a6-15ca-4d73-a9c8-6a22e970b90d
+  mitre:
+  - attack.discovery
+  - attack.t1069.001
+  severity: low
+  title: Local Groups Discovery - Linux
+sigma_fields: true
+description: Detects enumeration of local system groups. Adversaries may attempt to
+  find local system groups and permission settings

@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*merlinServer-Linux-x64*"'
+pre_detector:
+  case_condition: directly
+  id: a015e032-146d-4717-8944-7a1884122111
+  mitre:
+  - attack.execution
+  - attack.resource_development
+  - attack.t1587
+  severity: high
+  title: Linux HackTool Execution
+sigma_fields: true
+description: Detects known hacktool execution based on image name.

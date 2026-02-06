@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*-ufw-init*force-stop*"'
+pre_detector:
+  case_condition: directly
+  id: 84c9e83c-599a-458a-a0cb-0ecce44e807a
+  mitre:
+  - attack.defense_evasion
+  - attack.t1562.004
+  severity: medium
+  title: Ufw Force Stop Using Ufw-Init
+sigma_fields: true
+description: Detects attempts to force stop the ufw using ufw-init

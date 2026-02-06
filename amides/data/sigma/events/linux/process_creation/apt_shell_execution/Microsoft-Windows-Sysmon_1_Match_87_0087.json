@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T08:48:14.983738000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "apt update -o apt::update::pre-invoke::=find /home -name '*.conf' -o -name 'id_rsa'; whoami -qq",
+  "Image": "/usr/bin/apt",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 244368,
+    "entity_id": "{8b8a9dc4-d3a4-6964-a56b-ba7174610000}",
+    "executable": "/usr/bin/apt",
+    "name": "apt",
+    "command_line": "apt update -o apt::update::pre-invoke::=find /home -name '*.conf' -o -name 'id_rsa'; whoami -qq",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "0dba8843674864cea269a468b723a38ce0a830790e339b84bdc2b57e05aa558a"
+    },
+    "parent": {
+      "pid": 244367,
+      "entity_id": "{8b8a9dc4-d3a4-6964-1d28-a312d6640000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Invocation via Apt - Linux",
+    "sigma_rule_id": "bb382fd5-b454-47ea-a264-1828e4c766d6",
+    "attack_id": "87",
+    "original_command": "apt update -o \"apt::update::pre-invoke::=find /home -name '*.conf' -o -name 'id_rsa'; whoami\" -qq",
+    "log_file": "Shell_Invocation_via_Apt_attack87.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T08:48:14.983738000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 10:57:40.524",
+      "ProcessGuid": "{8b8a9dc4-d3a4-6964-a56b-ba7174610000}",
+      "ProcessId": "244368",
+      "Image": "/usr/bin/apt",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "apt update -o apt::update::pre-invoke::=find /home -name '*.conf' -o -name 'id_rsa'; whoami -qq",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=0dba8843674864cea269a468b723a38ce0a830790e339b84bdc2b57e05aa558a",
+      "ParentProcessGuid": "{8b8a9dc4-d3a4-6964-1d28-a312d6640000}",
+      "ParentProcessId": "244367",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

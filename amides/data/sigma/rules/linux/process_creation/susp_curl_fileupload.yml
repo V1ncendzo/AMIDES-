@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*curl*--upload-file*://localhost*"'
+pre_detector:
+  case_condition: directly
+  id: 00b90cc1-17ec-402c-96ad-3a8117d7a582
+  mitre:
+  - attack.exfiltration
+  - attack.command_and_control
+  - attack.t1567
+  - attack.t1105
+  severity: medium
+  title: Suspicious Curl File Upload - Linux
+sigma_fields: true
+description: Detects a suspicious curl process start the adds a file to a web request

@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*bash 0<&1*"'
+pre_detector:
+  case_condition: directly
+  id: 47b3bbd4-1bf7-48cc-84ab-995362aaa75a
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: high
+  title: Shell Execution via Git - Linux
+sigma_fields: true
+description: 'Detects the use of the "git" utility to execute a shell. Such behavior
+  may be associated with privilege escalation, unauthorized command execution, or
+  to break out from restricted environments.
+
+  '

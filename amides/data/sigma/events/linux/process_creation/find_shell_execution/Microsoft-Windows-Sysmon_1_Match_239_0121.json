@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-16T17:34:53.759652000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c find . -exec \\'/bin/sh\\' \\; -quit",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 425438,
+    "entity_id": "{8b8a9dc4-6900-696a-1da8-366f34620000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c find . -exec \\'/bin/sh\\' \\; -quit",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 120295,
+      "entity_id": "{8b8a9dc4-612c-696a-dd23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Execution via Find - Linux",
+    "sigma_rule_id": "6adfbf8f-52be-4444-9bac-81b539624146",
+    "attack_id": "239",
+    "original_command": "find . -exec \\'/bin/sh\\' \\; -quit",
+    "log_file": "Shell_Execution_via_Find_attack239.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-16T17:34:53.759652000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-16 16:36:16.409",
+      "ProcessGuid": "{8b8a9dc4-6900-696a-1da8-366f34620000}",
+      "ProcessId": "425438",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c find . -exec \\'/bin/sh\\' \\; -quit",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000005000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-612c-696a-dd23-700000000000}",
+      "ParentProcessId": "120295",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

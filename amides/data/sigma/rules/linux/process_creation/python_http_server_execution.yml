@@ -1,0 +1,21 @@
+filter: 'process.command_line: "*python2*SimpleHTTPServer*"'
+pre_detector:
+  case_condition: directly
+  id: 3f0f5957-04f8-4792-ad89-192b0303bde6
+  mitre:
+  - attack.exfiltration
+  - attack.t1048.003
+  severity: medium
+  title: Python WebServer Execution - Linux
+sigma_fields: true
+description: 'Detects the execution of Python web servers via command line interface
+  (CLI).
+
+  After gaining access to target systems, adversaries may use Python''s built-in HTTP
+  server modules to quickly establish a web server without requiring additional software.
+
+  This technique is commonly used in post-exploitation scenarios as it provides a
+  simple method for transferring files between the compromised host and attacker-controlled
+  systems.
+
+  '

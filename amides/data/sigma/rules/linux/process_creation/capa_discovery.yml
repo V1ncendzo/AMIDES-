@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*getcap*"'
+pre_detector:
+  case_condition: directly
+  id: d8d97d51-122d-4cdd-9e2f-01b4b4933530
+  mitre:
+  - attack.discovery
+  - attack.t1083
+  severity: low
+  title: Capabilities Discovery - Linux
+sigma_fields: true
+description: Detects usage of "getcap" binary. This is often used during recon activity to determine potential binaries that can be abused as GTFOBins or other.

@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-17T01:25:35.598543000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/bash -c true",
+  "Image": "/usr/bin/bash",
+  "ParentImage": "/usr/bin/flock",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 751107,
+    "entity_id": "{8b8a9dc4-d68a-696a-2d53-3724ec5f0000}",
+    "executable": "/usr/bin/bash",
+    "name": "bash",
+    "command_line": "/bin/bash -c true",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1"
+    },
+    "parent": {
+      "pid": 751106,
+      "entity_id": "{8b8a9dc4-d68a-696a-6177-7ebf9a580000}",
+      "executable": "/usr/bin/flock",
+      "name": "flock",
+      "command_line": "flock"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Execution via Flock - Linux",
+    "sigma_rule_id": "4b09c71e-4269-4111-9cdd-107d8867f0cc",
+    "attack_id": "114",
+    "original_command": "[Command ID 114]",
+    "log_file": "Shell_Execution_via_Flock_attack114.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-17T01:25:35.598543000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-17 00:23:38.099",
+      "ProcessGuid": "{8b8a9dc4-d68a-696a-2d53-3724ec5f0000}",
+      "ProcessId": "751107",
+      "Image": "/usr/bin/bash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/bash -c true",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000005000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1",
+      "ParentProcessGuid": "{8b8a9dc4-d68a-696a-6177-7ebf9a580000}",
+      "ParentProcessId": "751106",
+      "ParentImage": "/usr/bin/flock",
+      "ParentCommandLine": "flock",
+      "ParentUser": "root"
+    }
+  }
+}

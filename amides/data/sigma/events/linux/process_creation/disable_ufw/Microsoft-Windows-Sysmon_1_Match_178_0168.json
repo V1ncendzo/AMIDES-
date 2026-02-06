@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T15:42:06.177200000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "python3 -c import os; os.system('\\u0075\\u0066\\u0077\\u0020\\u0064\\u0069\\u0073\\u0061\\u0062\\u006c\\u0065')",
+  "Image": "/usr/bin/python3.12",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 95749,
+    "entity_id": "{8b8a9dc4-a956-6960-1d23-700000000000}",
+    "executable": "/usr/bin/python3.12",
+    "name": "python3.12",
+    "command_line": "python3 -c import os; os.system('\\u0075\\u0066\\u0077\\u0020\\u0064\\u0069\\u0073\\u0061\\u0062\\u006c\\u0065')",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "1319c137ea5d30f1d7599943cb0e72666648c20a94cf5932dd095364d07dafeb"
+    },
+    "parent": {
+      "pid": 95748,
+      "entity_id": "{8b8a9dc4-a956-6960-1d98-a4b3c2580000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Ufw Force Stop Using Ufw-Init",
+    "sigma_rule_id": "84c9e83c-599a-458a-a0cb-0ecce44e807a",
+    "attack_id": "178",
+    "original_command": "python3 -c \"import os; os.system('\\u0075\\u0066\\u0077\\u0020\\u0064\\u0069\\u0073\\u0061\\u0062\\u006c\\u0065')\"",
+    "log_file": "Ufw_Force_Stop_Using_Ufw-Init_attack178.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T15:42:06.177200000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 07:08:06.899",
+      "ProcessGuid": "{8b8a9dc4-a956-6960-1d23-700000000000}",
+      "ProcessId": "95749",
+      "Image": "/usr/bin/python3.12",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "python3 -c import os; os.system('\\u0075\\u0066\\u0077\\u0020\\u0064\\u0069\\u0073\\u0061\\u0062\\u006c\\u0065')",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=1319c137ea5d30f1d7599943cb0e72666648c20a94cf5932dd095364d07dafeb",
+      "ParentProcessGuid": "{8b8a9dc4-a956-6960-1d98-a4b3c2580000}",
+      "ParentProcessId": "95748",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

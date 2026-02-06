@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*system*syslog*config*"'
+pre_detector:
+  case_condition: directly
+  id: 38eb1dbb-011f-40b1-a126-cf03a0210563
+  mitre:
+  - attack.defense_evasion
+  - attack.execution
+  - attack.t1562.001
+  - attack.t1562.003
+  - attack.t1059.012
+  severity: medium
+  title: ESXi Syslog Configuration Change Via ESXCLI
+sigma_fields: true
+description: Detects changes to the ESXi syslog configuration via "esxcli"

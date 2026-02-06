@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*/tmp/*"'
+pre_detector:
+  case_condition: directly
+  id: 999c3b12-0a8c-40b6-8e13-dd7d62b75c7a
+  mitre:
+  - attack.execution
+  severity: medium
+  title: Potentially Suspicious Named Pipe Created Via Mkfifo
+sigma_fields: true
+description: Detects the creation of a new named pipe using the "mkfifo" utility in
+  a potentially suspicious location

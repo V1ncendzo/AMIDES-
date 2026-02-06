@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*/var/spool/mail*"'
+pre_detector:
+  case_condition: directly
+  id: 80915f59-9b56-4616-9de0-fd0dea6c12fe
+  mitre:
+  - attack.defense_evasion
+  - attack.t1070.002
+  severity: medium
+  title: Clear Linux Logs
+sigma_fields: true
+description: Detects attempts to clear logs on the system. Adversaries may clear system
+  logs to hide evidence of an intrusion

@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*doas*"'
+pre_detector:
+  case_condition: directly
+  id: 067d8238-7127-451c-a9ec-fa78045b618b
+  mitre:
+  - attack.defense_evasion
+  - attack.privilege_escalation
+  - attack.t1548
+  severity: low
+  title: Linux Doas Tool Execution
+sigma_fields: true
+description: Detects the doas tool execution in linux host platform. This utility
+  tool allow standard users to perform tasks as root, the same way sudo does.

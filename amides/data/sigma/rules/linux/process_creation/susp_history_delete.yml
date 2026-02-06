@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*unlink*_history*"'
+pre_detector:
+  case_condition: directly
+  id: 1182f3b3-e716-4efa-99ab-d2685d04360f
+  mitre:
+  - attack.impact
+  - attack.t1565.001
+  severity: high
+  title: History File Deletion
+sigma_fields: true
+description: Detects events in which a history file gets deleted, e.g. the ~/bash_history
+  to remove traces of malicious activity

@@ -1,0 +1,31 @@
+{
+    "name": "validation_misuse_char_matches",
+    "timestamp": "",
+    "thresholds": {
+        "num_thresholds": 51,
+        "min_threshold": 0.0,
+        "max_threshold": 1.0
+    },
+    "optimum": {
+        "threshold": 0.32,
+        "f1_score": 0.9996602106693849,
+        "precision": 0.9996602106693849,
+        "recall": 0.9996602106693849,
+        "mcc": 0.9992636999635959,
+        "tn": 2521.0,
+        "tp": 2942.0,
+        "fn": 1.0,
+        "fp": 1.0
+    },
+    "default": {
+        "threshold": 0.5,
+        "f1_score": 0.9993201903467029,
+        "precision": 0.999659979598776,
+        "recall": 0.9989806320081549,
+        "mcc": 0.998527754089481,
+        "tn": 2521.0,
+        "tp": 2940.0,
+        "fn": 3.0,
+        "fp": 1.0
+    }
+}

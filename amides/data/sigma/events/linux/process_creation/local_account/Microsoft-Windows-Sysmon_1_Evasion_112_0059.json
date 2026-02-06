@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T05:48:46.207276000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "cut -d: -f1-7 /etc/passwd",
+  "Image": "/usr/bin/cut",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 149266,
+    "entity_id": "{8b8a9dc4-b3e9-6964-216f-0621345a0000}",
+    "executable": "/usr/bin/cut",
+    "name": "cut",
+    "command_line": "cut -d: -f1-7 /etc/passwd",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "e7b6384461bc020f30bbfa21e932eaaeccc282f73b77b6721f451d442231d202"
+    },
+    "parent": {
+      "pid": 149265,
+      "entity_id": "{8b8a9dc4-b3e9-6964-1d48-91ea25580000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local System Accounts Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "112",
+    "original_command": "cut -d: -f1-7 /etc/passwd",
+    "log_file": "Local_System_Accounts_Discovery_-_Linux_attack112.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T05:48:46.207276000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 08:42:17.597",
+      "ProcessGuid": "{8b8a9dc4-b3e9-6964-216f-0621345a0000}",
+      "ProcessId": "149266",
+      "Image": "/usr/bin/cut",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "cut -d: -f1-7 /etc/passwd",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=e7b6384461bc020f30bbfa21e932eaaeccc282f73b77b6721f451d442231d202",
+      "ParentProcessGuid": "{8b8a9dc4-b3e9-6964-1d48-91ea25580000}",
+      "ParentProcessId": "149265",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

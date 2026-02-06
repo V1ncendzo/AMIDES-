@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*packetbeat*"'
+pre_detector:
+  case_condition: directly
+  id: c9d8b7fd-78e4-44fe-88f6-599135d46d60
+  mitre:
+  - attack.discovery
+  - attack.t1518.001
+  severity: low
+  title: Security Software Discovery - Linux
+sigma_fields: true
+description: Detects usage of system utilities (only grep and egrep for now) to discover
+  security software discovery

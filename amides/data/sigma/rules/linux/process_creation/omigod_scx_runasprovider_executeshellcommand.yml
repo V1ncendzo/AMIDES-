@@ -1,0 +1,24 @@
+filter: 'process.command_line: "*/bin/sh*"'
+pre_detector:
+  case_condition: directly
+  id: 21541900-27a9-4454-9c4c-3f0a4240344a
+  mitre:
+  - attack.privilege_escalation
+  - attack.initial_access
+  - attack.execution
+  - attack.t1068
+  - attack.t1190
+  - attack.t1203
+  severity: high
+  title: OMIGOD SCX RunAsProvider ExecuteShellCommand
+sigma_fields: true
+description: 'Rule to detect the use of the SCX RunAsProvider Invoke_ExecuteShellCommand
+  to execute any UNIX/Linux command using the /bin/sh shell.
+
+  SCXcore, started as the Microsoft Operations Manager UNIX/Linux Agent, is now used
+  in a host of products including
+
+  Microsoft Operations Manager, Microsoft Azure, and Microsoft Operations Management
+  Suite.
+
+  '

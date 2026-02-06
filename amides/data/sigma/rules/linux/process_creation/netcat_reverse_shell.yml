@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*ncat*/bin/pdksh*-e*"'
+pre_detector:
+  case_condition: directly
+  id: 7f734ed0-4f47-46c0-837f-6ee62505abd9
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: high
+  title: Potential Netcat Reverse Shell Execution
+sigma_fields: true
+description: Detects execution of netcat with the "-e" flag followed by common shells.
+  This could be a sign of a potential reverse shell setup.

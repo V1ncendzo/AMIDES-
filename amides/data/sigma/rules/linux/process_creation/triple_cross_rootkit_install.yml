@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*tc*enp0s3*"'
+pre_detector:
+  case_condition: directly
+  id: 22236d75-d5a0-4287-bf06-c93b1770860f
+  mitre:
+  - attack.defense_evasion
+  - attack.t1014
+  severity: high
+  title: Triple Cross eBPF Rootkit Install Commands
+sigma_fields: true
+description: Detects default install commands of the Triple Cross eBPF rootkit based
+  on the "deployer.sh" script

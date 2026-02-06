@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-15T17:56:51.993313000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "dd conv=fsync status=progress if=/dev/zero of=/tmp/confidential.dat count=1 bs=1024",
+  "Image": "/usr/bin/dd",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 31513,
+    "entity_id": "{8b8a9dc4-257b-6969-21ae-ef321f600000}",
+    "executable": "/usr/bin/dd",
+    "name": "dd",
+    "command_line": "dd conv=fsync status=progress if=/dev/zero of=/tmp/confidential.dat count=1 bs=1024",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "51f8ce55882af86c5c9ffd9f1b1ecafec4549e94c6deef6c28e74229dcdc7fb2"
+    },
+    "parent": {
+      "pid": 31512,
+      "entity_id": "{8b8a9dc4-257b-6969-1d58-2791cc570000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "DD File Overwrite",
+    "sigma_rule_id": "2953194b-e33c-4859-b9e8-05948c167447",
+    "attack_id": "106",
+    "original_command": "dd conv=fsync status=progress if=/dev/zero of=/tmp/confidential.dat count=1 bs=1024",
+    "log_file": "DD_File_Overwrite_attack106.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-15T17:56:51.993313000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-15 17:35:55.780",
+      "ProcessGuid": "{8b8a9dc4-257b-6969-21ae-ef321f600000}",
+      "ProcessId": "31513",
+      "Image": "/usr/bin/dd",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "dd conv=fsync status=progress if=/dev/zero of=/tmp/confidential.dat count=1 bs=1024",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=51f8ce55882af86c5c9ffd9f1b1ecafec4549e94c6deef6c28e74229dcdc7fb2",
+      "ParentProcessGuid": "{8b8a9dc4-257b-6969-1d58-2791cc570000}",
+      "ParentProcessId": "31512",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*localinstall*"'
+pre_detector:
+  case_condition: directly
+  id: 700fb7e8-2981-401c-8430-be58e189e741
+  mitre:
+  - attack.defense_evasion
+  - attack.t1553.004
+  severity: medium
+  title: Suspicious Package Installed - Linux
+sigma_fields: true
+description: Detects installation of suspicious packages using system installation
+  utilities

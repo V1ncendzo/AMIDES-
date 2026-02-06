@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-16T15:15:02.829824000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "nawk BEGIN {system(\"/bin/sh\\t\")}",
+  "Image": "/usr/bin/mawk",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 67774,
+    "entity_id": "{8b8a9dc4-4839-696a-d952-2ba9ca640000}",
+    "executable": "/usr/bin/mawk",
+    "name": "mawk",
+    "command_line": "nawk BEGIN {system(\"/bin/sh\\t\")}",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c"
+    },
+    "parent": {
+      "pid": 67773,
+      "entity_id": "{8b8a9dc4-4839-696a-1da8-e9d2b25c0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Suspicious Invocation of Shell via AWK - Linux",
+    "sigma_rule_id": "8c1a5675-cb85-452f-a298-b01b22a51856",
+    "attack_id": "94",
+    "original_command": "nawk 'BEGIN {system(\"/bin/sh\\t\")}'",
+    "log_file": "Suspicious_Invocation_of_Shell_via_AWK_attack94.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-16T15:15:02.829824000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-16 14:16:25.480",
+      "ProcessGuid": "{8b8a9dc4-4839-696a-d952-2ba9ca640000}",
+      "ProcessId": "67774",
+      "Image": "/usr/bin/mawk",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "nawk BEGIN {system(\"/bin/sh\\t\")}",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c",
+      "ParentProcessGuid": "{8b8a9dc4-4839-696a-1da8-e9d2b25c0000}",
+      "ParentProcessId": "67773",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "eval_rl_attr",
+    "timestamp": "",
+    "num_rules": 20,
+    "num_total_samples": 2943,
+    "num_incomplete_samples": 0,
+    "results": {
+        "tp": 2943,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "total_hits": 2943.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "top_1_hits": 1651.0,
+        "top_1_hit_rate": 0.5609921848453958,
+        "top_3_hits": 2742.0,
+        "top_3_hit_rate": 0.9317023445463812,
+        "top_5_hits": 2846.0,
+        "top_5_hit_rate": 0.9670404349303432,
+        "top_10_hits": 2923.0,
+        "top_10_hit_rate": 0.9932042133876996
+    }
+}

@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*vm process*kill*"'
+pre_detector:
+  case_condition: directly
+  id: 2992ac4d-31e9-4325-99f2-b18a73221bb2
+  mitre:
+  - attack.execution
+  - attack.impact
+  - attack.t1059.012
+  - attack.t1529
+  severity: medium
+  title: ESXi VM Kill Via ESXCLI
+sigma_fields: true
+description: Detects execution of the "esxcli" command with the "vm" and "kill" flag
+  in order to kill/shutdown a specific VM.

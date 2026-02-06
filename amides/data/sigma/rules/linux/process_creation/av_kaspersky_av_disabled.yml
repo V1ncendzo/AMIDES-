@@ -1,0 +1,19 @@
+filter: 'process.command_line: "*stop*kesl*"'
+pre_detector:
+  case_condition: directly
+  id: 36388120-b3f1-4ce9-b50b-280d9a7f4c04
+  mitre:
+  - attack.execution
+  - attack.defense_evasion
+  - attack.t1562.001
+  severity: high
+  title: Kaspersky Endpoint Security Stopped Via CommandLine - Linux
+sigma_fields: true
+description: 'Detects execution of the Kaspersky init.d stop script on Linux systems
+  either directly or via systemctl.
+
+  This activity may indicate a manual interruption of the antivirus service by an
+  administrator, or it could be a sign of potential tampering or evasion attempts
+  by malicious actors.
+
+  '

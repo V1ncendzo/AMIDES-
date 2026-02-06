@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*curl*"'
+pre_detector:
+  case_condition: directly
+  id: ea34fb97-e2c4-4afb-810f-785e4459b194
+  mitre:
+  - attack.command_and_control
+  - attack.t1105
+  severity: low
+  title: Curl Usage on Linux
+sigma_fields: true
+description: Detects a curl process start on linux, which indicates a file download
+  from a remote location or a simple web request to a remote server

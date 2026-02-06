@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*python2*import pty*spawn*"'
+pre_detector:
+  case_condition: directly
+  id: c4042d54-110d-45dd-a0e1-05c47822c937
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: medium
+  title: Python Spawning Pretty TTY Via PTY Module
+sigma_fields: true
+description: 'Detects a python process calling to the PTY module in order to spawn
+  a pretty tty which could be indicative of potential reverse shell activity.
+
+  '

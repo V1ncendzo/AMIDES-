@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*wget*--output-document*/tmp/*"'
+pre_detector:
+  case_condition: directly
+  id: cf610c15-ed71-46e1-bdf8-2bd1a99de6c4
+  mitre:
+  - attack.command_and_control
+  - attack.t1105
+  severity: medium
+  title: Download File To Potentially Suspicious Directory Via Wget
+sigma_fields: true
+description: Detects the use of wget to download content to a suspicious directory

@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T16:05:35.963559000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "sudo sh -c /sbin/modprobe \"msr\" allow_writes=on #comment",
+  "Image": "/usr/bin/sudo",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 121512,
+    "entity_id": "{8b8a9dc4-274f-6961-d14b-c9d9f25f0000}",
+    "executable": "/usr/bin/sudo",
+    "name": "sudo",
+    "command_line": "sudo sh -c /sbin/modprobe \"msr\" allow_writes=on #comment",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686"
+    },
+    "parent": {
+      "pid": 121511,
+      "entity_id": "{8b8a9dc4-274f-6961-1de8-8461555e0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Linux Crypto Mining Indicators",
+    "sigma_rule_id": "9069ea3c-b213-4c52-be13-86506a227ab1",
+    "attack_id": "27",
+    "original_command": "sudo sh -c '/sbin/modprobe \"msr\" allow_writes=on #comment'",
+    "log_file": "Linux_Crypto_Mining_Indicators_attack27.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T16:05:35.963559000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 16:05:35.963",
+      "ProcessGuid": "{8b8a9dc4-274f-6961-d14b-c9d9f25f0000}",
+      "ProcessId": "121512",
+      "Image": "/usr/bin/sudo",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "sudo sh -c /sbin/modprobe \"msr\" allow_writes=on #comment",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000005000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686",
+      "ParentProcessGuid": "{8b8a9dc4-274f-6961-1de8-8461555e0000}",
+      "ParentProcessId": "121511",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

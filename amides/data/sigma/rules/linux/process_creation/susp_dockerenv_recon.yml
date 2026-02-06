@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*.dockerenv*"'
+pre_detector:
+  case_condition: directly
+  id: 11701de9-d5a5-44aa-8238-84252f131895
+  mitre:
+  - attack.discovery
+  - attack.t1082
+  severity: low
+  title: Docker Container Discovery Via Dockerenv Listing
+sigma_fields: true
+description: Detects listing or file reading of ".dockerenv" which can be a sing of
+  potential container discovery

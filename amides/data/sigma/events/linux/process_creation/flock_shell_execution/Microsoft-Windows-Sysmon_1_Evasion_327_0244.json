@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-17T01:52:06.263000000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c which ps",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/share/antigravity/antigravity",
+  "CurrentDirectory": "/home/vincenzolog",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "vincenzolog"
+  },
+  "process": {
+    "pid": 766117,
+    "entity_id": "{8b8a9dc4-dcc2-696a-1d58-1e93f1580000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c which ps",
+    "working_directory": "/home/vincenzolog",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 8900,
+      "entity_id": "{8b8a9dc4-2c74-696a-10de-87a384600000}",
+      "executable": "/usr/share/antigravity/antigravity",
+      "name": "antigravity",
+      "command_line": "/proc/self/exe"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Execution via Flock - Linux",
+    "sigma_rule_id": "4b09c71e-4269-4111-9cdd-107d8867f0cc",
+    "attack_id": "327",
+    "original_command": "[Command ID 327]",
+    "log_file": "Shell_Execution_via_Flock_attack327.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-17T01:52:06.263000000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-17 00:50:10.362",
+      "ProcessGuid": "{8b8a9dc4-dcc2-696a-1d58-1e93f1580000}",
+      "ProcessId": "766117",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c which ps",
+      "CurrentDirectory": "/home/vincenzolog",
+      "User": "vincenzolog",
+      "LogonGuid": "{8b8a9dc4-0000-0000-e803-000000000000}",
+      "LogonId": "1000",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-2c74-696a-10de-87a384600000}",
+      "ParentProcessId": "8900",
+      "ParentImage": "/usr/share/antigravity/antigravity",
+      "ParentCommandLine": "/proc/self/exe",
+      "ParentUser": "vincenzolog"
+    }
+  }
+}

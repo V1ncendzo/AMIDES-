@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-16T12:46:32.599868000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/usr/bin/systemctl stop kesl",
+  "Image": "/usr/bin/systemctl",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 25155,
+    "entity_id": "{8b8a9dc4-3329-696a-7da7-7c2c19570000}",
+    "executable": "/usr/bin/systemctl",
+    "name": "systemctl",
+    "command_line": "/usr/bin/systemctl stop kesl",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "9dd42d9c778bb8194ba3161b06b6247a4b0a28baf6cfe27c203d861453f0334e"
+    },
+    "parent": {
+      "pid": 25154,
+      "entity_id": "{8b8a9dc4-3329-696a-1db8-0e754f630000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Kaspersky Endpoint Security Stopped Via CommandLine - Linux",
+    "sigma_rule_id": "36388120-b3f1-4ce9-b50b-280d9a7f4c04",
+    "attack_id": "143",
+    "original_command": "/usr/bin/systemctl stop kesl",
+    "log_file": "Kaspersky_Endpoint_Security_Stopped_Via_CommandLine_attack143.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-16T12:46:32.599868000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-16 12:46:33.304",
+      "ProcessGuid": "{8b8a9dc4-3329-696a-7da7-7c2c19570000}",
+      "ProcessId": "25155",
+      "Image": "/usr/bin/systemctl",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/usr/bin/systemctl stop kesl",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000003000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=9dd42d9c778bb8194ba3161b06b6247a4b0a28baf6cfe27c203d861453f0334e",
+      "ParentProcessGuid": "{8b8a9dc4-3329-696a-1db8-0e754f630000}",
+      "ParentProcessId": "25154",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

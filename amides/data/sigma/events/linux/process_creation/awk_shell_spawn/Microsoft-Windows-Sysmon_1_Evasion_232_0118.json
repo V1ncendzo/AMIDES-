@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-16T15:30:09.264946000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c awk 'BEGIN{system(\"/bi\"\"n/\"\"sh\")}'",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 76945,
+    "entity_id": "{8b8a9dc4-4bc3-696a-1df8-d734fa5d0000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c awk 'BEGIN{system(\"/bi\"\"n/\"\"sh\")}'",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 61404,
+      "entity_id": "{8b8a9dc4-45ca-696a-dd23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Suspicious Invocation of Shell via AWK - Linux",
+    "sigma_rule_id": "8c1a5675-cb85-452f-a298-b01b22a51856",
+    "attack_id": "232",
+    "original_command": "awk 'BEGIN{system(\"/bi\"\"n/\"\"sh\")}'",
+    "log_file": "Suspicious_Invocation_of_Shell_via_AWK_attack232.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-16T15:30:09.264946000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-16 14:31:31.913",
+      "ProcessGuid": "{8b8a9dc4-4bc3-696a-1df8-d734fa5d0000}",
+      "ProcessId": "76945",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c awk 'BEGIN{system(\"/bi\"\"n/\"\"sh\")}'",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-45ca-696a-dd23-700000000000}",
+      "ParentProcessId": "61404",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

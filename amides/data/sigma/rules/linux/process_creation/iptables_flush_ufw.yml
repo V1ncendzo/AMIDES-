@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*iptables-legacy-multi*ufw6-logging-allow*-F*"'
+pre_detector:
+  case_condition: directly
+  id: 3be619f4-d9ec-4ea8-a173-18fdd01996ab
+  mitre:
+  - attack.defense_evasion
+  - attack.t1562.004
+  severity: medium
+  title: Flush Iptables Ufw Chain
+sigma_fields: true
+description: Detect use of iptables to flush all firewall rules, tables and chains
+  and allow all network traffic

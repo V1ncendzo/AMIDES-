@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T08:48:08.739237000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "apt-get update -qq -o apt::update::pre-invoke::=find /home /root -name '*.conf'; whoami",
+  "Image": "/usr/bin/apt-get",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 243978,
+    "entity_id": "{8b8a9dc4-d39e-6964-65aa-84f112570000}",
+    "executable": "/usr/bin/apt-get",
+    "name": "apt-get",
+    "command_line": "apt-get update -qq -o apt::update::pre-invoke::=find /home /root -name '*.conf'; whoami",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "eb53b3b66cbb7a90a370e26439e941b7cf146ddd91a5422063c761ce9e59c53b"
+    },
+    "parent": {
+      "pid": 243977,
+      "entity_id": "{8b8a9dc4-d39e-6964-1dd8-8d183b5c0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Shell Invocation via Apt - Linux",
+    "sigma_rule_id": "bb382fd5-b454-47ea-a264-1828e4c766d6",
+    "attack_id": "86",
+    "original_command": "apt-get update -qq -o \"apt::update::pre-invoke::=find /home /root -name '*.conf'; whoami\"",
+    "log_file": "Shell_Invocation_via_Apt_attack86.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T08:48:08.739237000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 10:57:34.278",
+      "ProcessGuid": "{8b8a9dc4-d39e-6964-65aa-84f112570000}",
+      "ProcessId": "243978",
+      "Image": "/usr/bin/apt-get",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "apt-get update -qq -o apt::update::pre-invoke::=find /home /root -name '*.conf'; whoami",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=eb53b3b66cbb7a90a370e26439e941b7cf146ddd91a5422063c761ce9e59c53b",
+      "ParentProcessGuid": "{8b8a9dc4-d39e-6964-1dd8-8d183b5c0000}",
+      "ParentProcessId": "243977",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

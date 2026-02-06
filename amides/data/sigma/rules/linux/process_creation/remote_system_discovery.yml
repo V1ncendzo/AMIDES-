@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*192.168.*"'
+pre_detector:
+  case_condition: directly
+  id: 11063ec2-de63-4153-935e-b1a8b9e616f1
+  mitre:
+  - attack.discovery
+  - attack.t1018
+  severity: low
+  title: Linux Remote System Discovery
+sigma_fields: true
+description: Detects the enumeration of other remote systems.

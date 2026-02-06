@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*echo 1 >*/sys/kernel/debug/tracing/events/kprobes/*"'
+pre_detector:
+  case_condition: directly
+  id: 7692f583-bd30-4008-8615-75dab3f08a99
+  mitre:
+  - attack.execution
+  - attack.defense_evasion
+  severity: medium
+  title: Enable BPF Kprobes Tracing
+sigma_fields: true
+description: Detects common command used to enable bpf kprobes tracing

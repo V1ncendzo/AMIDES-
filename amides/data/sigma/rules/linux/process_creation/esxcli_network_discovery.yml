@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*network*list*"'
+pre_detector:
+  case_condition: directly
+  id: 33e814e0-1f00-4e43-9c34-31fb7ae2b174
+  mitre:
+  - attack.discovery
+  - attack.execution
+  - attack.t1033
+  - attack.t1007
+  - attack.t1059.012
+  severity: medium
+  title: ESXi Network Configuration Discovery Via ESXCLI
+sigma_fields: true
+description: Detects execution of the "esxcli" command with the "network" flag in
+  order to retrieve information about the network configuration.

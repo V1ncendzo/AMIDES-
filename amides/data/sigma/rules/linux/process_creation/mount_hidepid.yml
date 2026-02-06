@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*hidepid=2*-o*"'
+pre_detector:
+  case_condition: directly
+  id: ec52985a-d024-41e3-8ff6-14169039a0b3
+  mitre:
+  - attack.credential_access
+  - attack.defense_evasion
+  - attack.t1564
+  severity: medium
+  title: Mount Execution With Hidepid Parameter
+sigma_fields: true
+description: Detects execution of the "mount" command with "hidepid" parameter to
+  make invisible processes to other users from the system

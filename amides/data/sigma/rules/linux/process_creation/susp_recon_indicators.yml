@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*-name .htpasswd*"'
+pre_detector:
+  case_condition: directly
+  id: 0cf7a157-8879-41a2-8f55-388dd23746b7
+  mitre:
+  - attack.reconnaissance
+  - attack.t1592.004
+  - attack.credential_access
+  - attack.t1552.001
+  severity: high
+  title: Linux Recon Indicators
+sigma_fields: true
+description: Detects events with patterns found in commands used for reconnaissance
+  on linux systems

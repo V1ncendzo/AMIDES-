@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T15:15:31.910398000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c sudo mkdir -p /var/opt/microsoft/scx/tmp && cd /var/opt/microsoft/scx/tmp && sudo $(echo L2Jpbi9zaAo= | base64 -d | tr -d '\\n') -c \"id\"",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 48630,
+    "entity_id": "{8b8a9dc4-a31c-6960-1d48-b47ff1590000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c sudo mkdir -p /var/opt/microsoft/scx/tmp && cd /var/opt/microsoft/scx/tmp && sudo $(echo L2Jpbi9zaAo= | base64 -d | tr -d '\\n') -c \"id\"",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 41048,
+      "entity_id": "{8b8a9dc4-9fa5-6960-1d23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "OMIGOD SCX RunAsProvider ExecuteShellCommand",
+    "sigma_rule_id": "21541900-27a9-4454-9c4c-3f0a4240344a",
+    "attack_id": "210",
+    "original_command": "sudo mkdir -p /var/opt/microsoft/scx/tmp && cd /var/opt/microsoft/scx/tmp && sudo $(echo L2Jpbi9zaAo= | base64 -d | tr -d '\\n') -c \"id\"",
+    "log_file": "OMIGOD_SCX_RunAsProvider_ExecuteShellCommand_attack210.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T15:15:31.910398000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 06:41:32.639",
+      "ProcessGuid": "{8b8a9dc4-a31c-6960-1d48-b47ff1590000}",
+      "ProcessId": "48630",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c sudo mkdir -p /var/opt/microsoft/scx/tmp && cd /var/opt/microsoft/scx/tmp && sudo $(echo L2Jpbi9zaAo= | base64 -d | tr -d '\\n') -c \"id\"",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-9fa5-6960-1d23-700000000000}",
+      "ParentProcessId": "41048",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+filter: 'process.command_line: "*atd*"'
+pre_detector:
+  case_condition: directly
+  id: d2d642d7-b393-43fe-bae4-e81ed5915c4b
+  mitre:
+  - attack.privilege_escalation
+  - attack.execution
+  - attack.persistence
+  - attack.t1053.002
+  severity: low
+  title: Scheduled Task/Job At
+sigma_fields: true
+description: 'Detects the use of at/atd which are utilities that are used to schedule
+  tasks.
+
+  They are often abused by adversaries to maintain persistence or to perform task
+  scheduling for initial or recurring execution of malicious code
+
+  '

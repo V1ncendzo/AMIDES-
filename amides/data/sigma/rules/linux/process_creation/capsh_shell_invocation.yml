@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*--*"'
+pre_detector:
+  case_condition: directly
+  id: db1ac3be-f606-4e3a-89e0-9607cbe6b98a
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: high
+  title: Capsh Shell Invocation - Linux
+sigma_fields: true
+description: 'Detects the use of the "capsh" utility to invoke a shell.
+
+  '

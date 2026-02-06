@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T05:48:30.017889000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "awk {print} /etc/passwd",
+  "Image": "/usr/bin/mawk",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 149093,
+    "entity_id": "{8b8a9dc4-b3d9-6964-d992-605d0f620000}",
+    "executable": "/usr/bin/mawk",
+    "name": "mawk",
+    "command_line": "awk {print} /etc/passwd",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c"
+    },
+    "parent": {
+      "pid": 149092,
+      "entity_id": "{8b8a9dc4-b3d9-6964-1de8-abe916650000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local System Accounts Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "108",
+    "original_command": "awk '{print}' /etc/passwd",
+    "log_file": "Local_System_Accounts_Discovery_-_Linux_attack108.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T05:48:30.017889000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 08:42:01.407",
+      "ProcessGuid": "{8b8a9dc4-b3d9-6964-d992-605d0f620000}",
+      "ProcessId": "149093",
+      "Image": "/usr/bin/mawk",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "awk {print} /etc/passwd",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=3850bf893d3f4f8ec462c8b59d6d66fdbbe8ddc0715b3d404d9cc574526b781c",
+      "ParentProcessGuid": "{8b8a9dc4-b3d9-6964-1de8-abe916650000}",
+      "ParentProcessId": "149092",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

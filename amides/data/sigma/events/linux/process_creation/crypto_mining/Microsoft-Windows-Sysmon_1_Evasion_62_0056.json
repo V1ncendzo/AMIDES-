@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T16:07:59.458793000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "sudo sh -c /sbin/modprobe msr allow_writes true",
+  "Image": "/usr/bin/sudo",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 122683,
+    "entity_id": "{8b8a9dc4-27df-6961-d1bb-224898610000}",
+    "executable": "/usr/bin/sudo",
+    "name": "sudo",
+    "command_line": "sudo sh -c /sbin/modprobe msr allow_writes true",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686"
+    },
+    "parent": {
+      "pid": 122682,
+      "entity_id": "{8b8a9dc4-27df-6961-1d38-f13d6c5e0000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Linux Crypto Mining Indicators",
+    "sigma_rule_id": "9069ea3c-b213-4c52-be13-86506a227ab1",
+    "attack_id": "62",
+    "original_command": "sudo sh -c \"/sbin/modprobe msr allow_writes true\"",
+    "log_file": "Linux_Crypto_Mining_Indicators_attack62.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T16:07:59.458793000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 16:07:59.458",
+      "ProcessGuid": "{8b8a9dc4-27df-6961-d1bb-224898610000}",
+      "ProcessId": "122683",
+      "Image": "/usr/bin/sudo",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "sudo sh -c /sbin/modprobe msr allow_writes true",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000005000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686",
+      "ParentProcessGuid": "{8b8a9dc4-27df-6961-1d38-f13d6c5e0000}",
+      "ParentProcessId": "122682",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

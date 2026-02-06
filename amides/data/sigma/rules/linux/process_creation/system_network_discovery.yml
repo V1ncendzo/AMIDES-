@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*/etc/resolv.conf*"'
+pre_detector:
+  case_condition: directly
+  id: e7bd1cfa-b446-4c88-8afb-403bcd79e3fa
+  mitre:
+  - attack.discovery
+  - attack.t1016
+  severity: medium
+  title: System Network Discovery - Linux
+sigma_fields: true
+description: Detects enumeration of local network configuration

@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*nextcloud*"'
+pre_detector:
+  case_condition: directly
+  id: 312b42b1-bded-4441-8b58-163a3af58775
+  mitre:
+  - attack.defense_evasion
+  - attack.t1036
+  severity: medium
+  title: Potentially Suspicious Execution From Tmp Folder
+sigma_fields: true
+description: Detects a potentially suspicious execution of a process located in the
+  '/tmp/' folder

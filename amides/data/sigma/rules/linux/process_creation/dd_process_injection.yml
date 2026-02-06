@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*of=*/proc/*/mem*"'
+pre_detector:
+  case_condition: directly
+  id: 4cad6c64-d6df-42d6-8dae-eb78defdc415
+  mitre:
+  - attack.privilege_escalation
+  - attack.defense_evasion
+  - attack.t1055.009
+  severity: medium
+  title: Potential Linux Process Code Injection Via DD Utility
+sigma_fields: true
+description: Detects the injection of code by overwriting the memory map of a Linux
+  process using the "dd" Linux command.

@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T06:33:29.854006000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/usr/bin/more /etc/group",
+  "Image": "/usr/bin/more",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 154898,
+    "entity_id": "{8b8a9dc4-be65-6964-7132-ea3f5d600000}",
+    "executable": "/usr/bin/more",
+    "name": "more",
+    "command_line": "/usr/bin/more /etc/group",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "3a7107fe9c256440396bff6fccc42b902ded96e053257c72de8c27a5f7642832"
+    },
+    "parent": {
+      "pid": 154897,
+      "entity_id": "{8b8a9dc4-be65-6964-1db8-d1f808590000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local Groups Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "13",
+    "original_command": "/usr/bin/more /etc/group",
+    "log_file": "Local_Groups_Discovery_-_Linux_attack13.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T06:33:29.854006000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 09:27:01.243",
+      "ProcessGuid": "{8b8a9dc4-be65-6964-7132-ea3f5d600000}",
+      "ProcessId": "154898",
+      "Image": "/usr/bin/more",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/usr/bin/more /etc/group",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=3a7107fe9c256440396bff6fccc42b902ded96e053257c72de8c27a5f7642832",
+      "ParentProcessGuid": "{8b8a9dc4-be65-6964-1db8-d1f808590000}",
+      "ParentProcessId": "154897",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*base64*"'
+pre_detector:
+  case_condition: directly
+  id: ea3ecad2-db86-4a89-ad0b-132a10d2db55
+  mitre:
+  - attack.execution
+  - attack.defense_evasion
+  - attack.t1059.004
+  - attack.t1036
+  severity: medium
+  title: Interactive Bash Suspicious Children
+sigma_fields: true
+description: Detects suspicious interactive bash as a parent to rather uncommon child
+  processes

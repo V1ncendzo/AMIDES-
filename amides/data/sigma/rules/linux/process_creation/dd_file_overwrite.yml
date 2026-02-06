@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*dd*if=/dev/zero*of=*"'
+pre_detector:
+  case_condition: directly
+  id: 2953194b-e33c-4859-b9e8-05948c167447
+  mitre:
+  - attack.impact
+  - attack.t1485
+  severity: low
+  title: DD File Overwrite
+sigma_fields: true
+description: Detects potential overwriting and deletion of a file using DD.

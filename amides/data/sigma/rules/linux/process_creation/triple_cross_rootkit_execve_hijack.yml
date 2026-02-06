@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*execve_hijack*"'
+pre_detector:
+  case_condition: directly
+  id: 0326c3c8-7803-4a0f-8c5c-368f747f7c3e
+  mitre:
+  - attack.defense_evasion
+  - attack.privilege_escalation
+  severity: high
+  title: Triple Cross eBPF Rootkit Execve Hijack
+sigma_fields: true
+description: Detects execution of a the file "execve_hijack" which is used by the
+  Triple Cross rootkit as a way to elevate privileges

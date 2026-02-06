@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T06:40:34.893108000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "perl -e exec(chr(99).chr(97).chr(116).chr(32).chr(47).chr(101).chr(116).chr(99).chr(47).chr(103).chr(114).chr(111).chr(117).chr(112))",
+  "Image": "/usr/bin/perl",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 159101,
+    "entity_id": "{8b8a9dc4-c00e-6964-2de9-9711a65e0000}",
+    "executable": "/usr/bin/perl",
+    "name": "perl",
+    "command_line": "perl -e exec(chr(99).chr(97).chr(116).chr(32).chr(47).chr(101).chr(116).chr(99).chr(47).chr(103).chr(114).chr(111).chr(117).chr(112))",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "38d70f54fd18d614e9e6cc35c960b45f54e7b991894b8308e704ae9953c86ce4"
+    },
+    "parent": {
+      "pid": 159100,
+      "entity_id": "{8b8a9dc4-c00e-6964-1d78-1104c1610000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Local Groups Discovery - Linux",
+    "sigma_rule_id": null,
+    "attack_id": "118",
+    "original_command": "perl -e 'exec(chr(99).chr(97).chr(116).chr(32).chr(47).chr(101).chr(116).chr(99).chr(47).chr(103).chr(114).chr(111).chr(117).chr(112))'",
+    "log_file": "Local_Groups_Discovery_-_Linux_attack118.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T06:40:34.893108000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 09:34:06.279",
+      "ProcessGuid": "{8b8a9dc4-c00e-6964-2de9-9711a65e0000}",
+      "ProcessId": "159101",
+      "Image": "/usr/bin/perl",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "perl -e exec(chr(99).chr(97).chr(116).chr(32).chr(47).chr(101).chr(116).chr(99).chr(47).chr(103).chr(114).chr(111).chr(117).chr(112))",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=38d70f54fd18d614e9e6cc35c960b45f54e7b991894b8308e704ae9953c86ce4",
+      "ParentProcessGuid": "{8b8a9dc4-c00e-6964-1d78-1104c1610000}",
+      "ParentProcessId": "159100",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

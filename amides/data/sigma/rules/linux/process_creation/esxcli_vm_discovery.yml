@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*list*"'
+pre_detector:
+  case_condition: directly
+  id: 5f1573a7-363b-4114-9208-ad7a61de46eb
+  mitre:
+  - attack.discovery
+  - attack.execution
+  - attack.t1033
+  - attack.t1007
+  - attack.t1059.012
+  severity: medium
+  title: ESXi VM List Discovery Via ESXCLI
+sigma_fields: true
+description: Detects execution of the "esxcli" command with the "vm" flag in order
+  to retrieve information about the installed VMs.

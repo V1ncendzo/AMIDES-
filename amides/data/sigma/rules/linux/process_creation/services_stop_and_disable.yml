@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*disable*"'
+pre_detector:
+  case_condition: directly
+  id: de25eeb8-3655-4643-ac3a-b662d3f26b6b
+  mitre:
+  - attack.defense_evasion
+  severity: medium
+  title: Disable Or Stop Services
+sigma_fields: true
+description: Detects the usage of utilities such as 'systemctl', 'service'...etc to
+  stop or disable tools and services

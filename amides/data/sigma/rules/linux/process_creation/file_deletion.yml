@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*unlink*"'
+pre_detector:
+  case_condition: directly
+  id: 30aed7b6-d2c1-4eaf-9382-b6bc43e50c57
+  mitre:
+  - attack.defense_evasion
+  - attack.t1070.004
+  severity: medium
+  title: File Deletion
+sigma_fields: true
+description: Detects file deletion using "rm", "shred" or "unlink" commands which
+  are used often by adversaries to delete files left behind by the actions of their
+  intrusion activity

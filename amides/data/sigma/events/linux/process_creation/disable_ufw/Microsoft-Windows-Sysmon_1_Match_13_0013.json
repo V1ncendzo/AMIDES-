@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T15:29:20.850434000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "sudo /usr/sbin/./ufw disable",
+  "Image": "/usr/bin/sudo",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 67467,
+    "entity_id": "{8b8a9dc4-a659-6960-d11b-43f22c590000}",
+    "executable": "/usr/bin/sudo",
+    "name": "sudo",
+    "command_line": "sudo /usr/sbin/./ufw disable",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686"
+    },
+    "parent": {
+      "pid": 67466,
+      "entity_id": "{8b8a9dc4-a659-6960-1de8-c18272570000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Ufw Force Stop Using Ufw-Init",
+    "sigma_rule_id": "84c9e83c-599a-458a-a0cb-0ecce44e807a",
+    "attack_id": "13",
+    "original_command": "sudo /usr/sbin/./ufw disable",
+    "log_file": "Ufw_Force_Stop_Using_Ufw-Init_attack13.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T15:29:20.850434000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 06:55:21.579",
+      "ProcessGuid": "{8b8a9dc4-a659-6960-d11b-43f22c590000}",
+      "ProcessId": "67467",
+      "Image": "/usr/bin/sudo",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "sudo /usr/sbin/./ufw disable",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686",
+      "ParentProcessGuid": "{8b8a9dc4-a659-6960-1de8-c18272570000}",
+      "ParentProcessId": "67466",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

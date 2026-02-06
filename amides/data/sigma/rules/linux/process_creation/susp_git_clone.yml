@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*clone*RemoteCodeExecution*"'
+pre_detector:
+  case_condition: directly
+  id: cfec9d29-64ec-4a0f-9ffe-0fdb856d5446
+  mitre:
+  - attack.reconnaissance
+  - attack.t1593.003
+  severity: medium
+  title: Suspicious Git Clone - Linux
+sigma_fields: true
+description: Detects execution of "git" in order to clone a remote repository that
+  contain suspicious keywords which might be suspicious

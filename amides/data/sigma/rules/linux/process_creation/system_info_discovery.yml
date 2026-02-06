@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*dmidecode*"'
+pre_detector:
+  case_condition: directly
+  id: 42df45e7-e6e9-43b5-8f26-bec5b39cc239
+  mitre:
+  - attack.discovery
+  - attack.t1082
+  severity: medium
+  title: System Information Discovery
+sigma_fields: true
+description: Detects system information discovery commands

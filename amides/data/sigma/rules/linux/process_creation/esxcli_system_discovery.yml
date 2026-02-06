@@ -1,0 +1,16 @@
+filter: 'process.command_line: "*system*list*"'
+pre_detector:
+  case_condition: directly
+  id: e80273e1-9faf-40bc-bd85-dbaff104c4e9
+  mitre:
+  - attack.discovery
+  - attack.execution
+  - attack.t1033
+  - attack.t1007
+  - attack.t1059.012
+  severity: medium
+  title: ESXi System Information Discovery Via ESXCLI
+sigma_fields: true
+description: Detects execution of the "esxcli" command with the "system" flag in order
+  to retrieve information about the different component of the system. Such as accounts,
+  modules, NTP, etc.

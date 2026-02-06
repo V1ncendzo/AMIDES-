@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*disable*falcon-sensor*"'
+pre_detector:
+  case_condition: directly
+  id: e3a8a052-111f-4606-9aee-f28ebeb76776
+  mitre:
+  - attack.defense_evasion
+  - attack.t1562.004
+  severity: medium
+  title: Disabling Security Tools
+sigma_fields: true
+description: Detects disabling security tools

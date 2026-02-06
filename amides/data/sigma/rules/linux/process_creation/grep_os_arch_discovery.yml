@@ -1,0 +1,15 @@
+filter: 'process.command_line: "*grep*aarch64*"'
+pre_detector:
+  case_condition: directly
+  id: d27ab432-2199-483f-a297-03633c05bae6
+  mitre:
+  - attack.discovery
+  - attack.t1082
+  severity: low
+  title: OS Architecture Discovery Via Grep
+sigma_fields: true
+description: 'Detects the use of grep to identify information about the operating
+  system architecture. Often combined beforehand with the execution of "uname" or
+  "cat /proc/cpuinfo"
+
+  '

@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*.service*"'
+pre_detector:
+  case_condition: directly
+  id: 31545105-3444-4584-bebf-c466353230d2
+  mitre:
+  - attack.defense_evasion
+  - attack.t1070.006
+  severity: medium
+  title: Touch Suspicious Service File
+sigma_fields: true
+description: Detects usage of the "touch" process in service file.

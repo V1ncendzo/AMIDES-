@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-09T15:39:39.415034000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "sudo perl -e system(\"\\x75\\x66\\x77\\x20\\x64\\x69\\x73\\x61\\x62\\x6c\\x65\")",
+  "Image": "/usr/bin/sudo",
+  "ParentImage": "/usr/bin/dash",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 90700,
+    "entity_id": "{8b8a9dc4-a8c4-6960-d1fb-adde95560000}",
+    "executable": "/usr/bin/sudo",
+    "name": "sudo",
+    "command_line": "sudo perl -e system(\"\\x75\\x66\\x77\\x20\\x64\\x69\\x73\\x61\\x62\\x6c\\x65\")",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686"
+    },
+    "parent": {
+      "pid": 90699,
+      "entity_id": "{8b8a9dc4-a8c4-6960-1d88-39c151610000}",
+      "executable": "/usr/bin/dash",
+      "name": "dash",
+      "command_line": "/bin/sh"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Ufw Force Stop Using Ufw-Init",
+    "sigma_rule_id": "84c9e83c-599a-458a-a0cb-0ecce44e807a",
+    "attack_id": "147",
+    "original_command": "sudo perl -e 'system(\"\\x75\\x66\\x77\\x20\\x64\\x69\\x73\\x61\\x62\\x6c\\x65\")'",
+    "log_file": "Ufw_Force_Stop_Using_Ufw-Init_attack147.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-09T15:39:39.415034000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-09 07:05:40.144",
+      "ProcessGuid": "{8b8a9dc4-a8c4-6960-d1fb-adde95560000}",
+      "ProcessId": "90700",
+      "Image": "/usr/bin/sudo",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "sudo perl -e system(\"\\x75\\x66\\x77\\x20\\x64\\x69\\x73\\x61\\x62\\x6c\\x65\")",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000006000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=654d953098b5dd26fcc3af44d4cf6e986f61f84ad9198d57722702c6034bd686",
+      "ParentProcessGuid": "{8b8a9dc4-a8c4-6960-1d88-39c151610000}",
+      "ParentProcessId": "90699",
+      "ParentImage": "/usr/bin/dash",
+      "ParentCommandLine": "/bin/sh",
+      "ParentUser": "root"
+    }
+  }
+}

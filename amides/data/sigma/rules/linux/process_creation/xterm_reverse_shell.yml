@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*:1*"'
+pre_detector:
+  case_condition: directly
+  id: 4e25af4b-246d-44ea-8563-e42aacab006b
+  mitre:
+  - attack.execution
+  - attack.t1059
+  severity: medium
+  title: Potential Xterm Reverse Shell
+sigma_fields: true
+description: Detects usage of "xterm" as a potential reverse shell tunnel

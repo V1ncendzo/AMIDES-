@@ -1,0 +1,13 @@
+filter: 'process.command_line: "*userdel*"'
+pre_detector:
+  case_condition: directly
+  id: 08f26069-6f80-474b-8d1f-d971c6fedea0
+  mitre:
+  - attack.impact
+  - attack.t1531
+  severity: medium
+  title: User Has Been Deleted Via Userdel
+sigma_fields: true
+description: Detects execution of the "userdel" binary. Which is used to delete a
+  user account and related files. This is sometimes abused by threat actors in order
+  to cover their tracks

@@ -1,0 +1,14 @@
+filter: 'process.command_line: "*/dev/null*/var/log/syslog*"'
+pre_detector:
+  case_condition: directly
+  id: 3fcc9b35-39e4-44c0-a2ad-9e82b6902b31
+  mitre:
+  - attack.defense_evasion
+  - attack.t1070.002
+  severity: high
+  title: Syslog Clearing or Removal Via System Utilities
+sigma_fields: true
+description: 'Detects specific commands commonly used to remove or empty the syslog.
+  Which is a technique often used by attacker as a method to hide their tracks
+
+  '

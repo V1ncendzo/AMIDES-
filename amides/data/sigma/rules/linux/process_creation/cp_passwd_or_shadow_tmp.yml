@@ -1,0 +1,11 @@
+filter: 'process.command_line: "*cp*passwd*/tmp/*"'
+pre_detector:
+  case_condition: directly
+  id: fa4aaed5-4fe0-498d-bbc0-08e3346387ba
+  mitre:
+  - attack.credential_access
+  - attack.t1552.001
+  severity: high
+  title: Copy Passwd Or Shadow From TMP Path
+sigma_fields: true
+description: Detects when the file "passwd" or "shadow" is copied from tmp path

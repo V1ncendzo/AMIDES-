@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*ls*/*"'
+pre_detector:
+  case_condition: directly
+  id: 43e26eb5-cd58-48d1-8ce9-a273f5d298d8
+  mitre:
+  - attack.discovery
+  - attack.t1082
+  severity: low
+  title: Potential Container Discovery Via Inodes Listing
+sigma_fields: true
+description: Detects listing of the inodes of the "/" directory to determine if the
+  we are running inside of a container.

@@ -1,0 +1,80 @@
+{
+  "@timestamp": "2026-01-13T08:35:41.294753000Z",
+  "message": "Process Create (Sysmon for Linux)",
+  "CommandLine": "/bin/sh -c printf ZWNobyBIZWxsbyBmcm9tIEF0b21pYyBSZWQgVGVhbSAmJiB1bmFtZSAtdgo= | base64 -d | bash",
+  "Image": "/usr/bin/dash",
+  "ParentImage": "/usr/bin/python3.12",
+  "CurrentDirectory": "/home/vincenzolog/Auto_test",
+  "event": {
+    "code": 1,
+    "provider": "Linux-Sysmon",
+    "category": [
+      "process"
+    ],
+    "type": [
+      "start"
+    ],
+    "action": "Process Create"
+  },
+  "host": {
+    "hostname": "vincenzolog-VMware-Virtual-Platform"
+  },
+  "user": {
+    "name": "root"
+  },
+  "process": {
+    "pid": 202453,
+    "entity_id": "{8b8a9dc4-d0b2-6964-1d38-edc61d5d0000}",
+    "executable": "/usr/bin/dash",
+    "name": "dash",
+    "command_line": "/bin/sh -c printf ZWNobyBIZWxsbyBmcm9tIEF0b21pYyBSZWQgVGVhbSAmJiB1bmFtZSAtdgo= | base64 -d | bash",
+    "working_directory": "/home/vincenzolog/Auto_test",
+    "hash": {
+      "sha256": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42"
+    },
+    "parent": {
+      "pid": 196928,
+      "entity_id": "{8b8a9dc4-ceaa-6964-1d23-700000000000}",
+      "executable": "/usr/bin/python3.12",
+      "name": "python3.12",
+      "command_line": "python3"
+    }
+  },
+  "labels": {
+    "sigma_rule_title": "Decode Base64 Encoded Text",
+    "sigma_rule_id": "e2072cab-8c9a-459b-b63c-40ae79e27031",
+    "attack_id": "127",
+    "original_command": "printf ZWNobyBIZWxsbyBmcm9tIEF0b21pYyBSZWQgVGVhbSAmJiB1bmFtZSAtdgo= | base64 -d | bash",
+    "log_file": "Decode_Base64_Encoded_Text_attack127.log",
+    "queried_event_type": "Microsoft-Windows-Sysmon_1"
+  },
+  "sysmon": {
+    "linux_event_data": {
+      "SystemTime": "2026-01-13T08:35:41.294753000Z",
+      "Computer": "vincenzolog-VMware-Virtual-Platform",
+      "RuleName": "-",
+      "UtcTime": "2026-01-12 10:45:06.835",
+      "ProcessGuid": "{8b8a9dc4-d0b2-6964-1d38-edc61d5d0000}",
+      "ProcessId": "202453",
+      "Image": "/usr/bin/dash",
+      "FileVersion": "-",
+      "Description": "-",
+      "Product": "-",
+      "Company": "-",
+      "OriginalFileName": "-",
+      "CommandLine": "/bin/sh -c printf ZWNobyBIZWxsbyBmcm9tIEF0b21pYyBSZWQgVGVhbSAmJiB1bmFtZSAtdgo= | base64 -d | bash",
+      "CurrentDirectory": "/home/vincenzolog/Auto_test",
+      "User": "root",
+      "LogonGuid": "{8b8a9dc4-0000-0000-0000-000004000000}",
+      "LogonId": "0",
+      "TerminalSessionId": "3",
+      "IntegrityLevel": "no level",
+      "Hashes": "SHA256=86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+      "ParentProcessGuid": "{8b8a9dc4-ceaa-6964-1d23-700000000000}",
+      "ParentProcessId": "196928",
+      "ParentImage": "/usr/bin/python3.12",
+      "ParentCommandLine": "python3",
+      "ParentUser": "root"
+    }
+  }
+}

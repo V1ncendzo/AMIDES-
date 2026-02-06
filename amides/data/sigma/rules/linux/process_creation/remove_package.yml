@@ -1,0 +1,12 @@
+filter: 'process.command_line: "*--remove*"'
+pre_detector:
+  case_condition: directly
+  id: 95d61234-7f56-465c-6f2d-b562c6fedbc4
+  mitre:
+  - attack.defense_evasion
+  - attack.t1070
+  severity: low
+  title: Linux Package Uninstall
+sigma_fields: true
+description: Detects linux package removal using builtin tools such as "yum", "apt",
+  "apt-get" or "dpkg".
